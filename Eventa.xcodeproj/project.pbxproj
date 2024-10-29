@@ -14,17 +14,29 @@
 		3DBED9762CB7A3AA00778850 /* Exceptions for "Eventa" folder in "Eventa" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				.swift,
 				Info.plist,
 			);
 			target = 3DBED9632CB7A3A800778850 /* Eventa */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		1779E1DB2CD0B5E8000CA7F1 /* Exceptions for "Eventa" folder in "Compile Sources" phase from "Eventa" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 3DBED9602CB7A3A800778850 /* Sources */;
+			membershipExceptions = (
+				.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3DBED9662CB7A3A800778850 /* Eventa */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				3DBED9762CB7A3AA00778850 /* Exceptions for "Eventa" folder in "Eventa" target */,
+				1779E1DB2CD0B5E8000CA7F1 /* Exceptions for "Eventa" folder in "Compile Sources" phase from "Eventa" target */,
 			);
 			path = Eventa;
 			sourceTree = "<group>";
