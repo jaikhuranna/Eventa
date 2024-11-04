@@ -11,18 +11,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        collectionView.dataSource = self
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        if section = 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         <#code#>
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        collectionView.dataSource = self
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        <#code#>
     }
     
 
