@@ -14,6 +14,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    func TESTgoToHome(){
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let homeviewController = storyboard.instantiateViewController(withIdentifier: "Home") as? HomeViewController {
+            self.present(homeviewController, animated: true, completion: nil)
+            }
+    }
+    
+    @IBAction func hi(_ sender: Any) {
+        TESTgoToHome()
+    }
+    
 }
 

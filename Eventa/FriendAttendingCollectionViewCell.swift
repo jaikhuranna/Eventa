@@ -14,7 +14,7 @@ class FriendAttendingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var FriendImageView: UIImageView!
     
     
-    @IBOutlet weak var FriendEvent: UILabel!
+    @IBOutlet weak var FriendEventName: UILabel!
     
     
     @IBOutlet weak var FriendEventTime: UILabel!
