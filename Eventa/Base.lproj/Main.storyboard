@@ -279,7 +279,7 @@
             </objects>
             <point key="canvasLocation" x="1324" y="2723"/>
         </scene>
-        <!--Profile-->
+        <!--Randi-->
         <scene sceneID="uTf-Dg-Wli">
             <objects>
                 <viewController id="FCb-Ca-J0C" customClass="ProfileViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
@@ -301,7 +301,7 @@
                             <constraint firstItem="cXa-YX-1Jh" firstAttribute="leading" secondItem="gyt-5M-FCK" secondAttribute="leading" id="lRA-Bg-w4u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="hoi-kA-bJL"/>
+                    <navigationItem key="navigationItem" title="Randi" id="hoi-kA-bJL"/>
                     <connections>
                         <outlet property="tableView" destination="cXa-YX-1Jh" id="Wb4-zx-JpO"/>
                     </connections>
@@ -494,6 +494,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEp-nR-0Hm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4843.5114503816794" y="-49.295774647887328"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1e7-pI-wWB">
+            <objects>
+                <viewController id="zUj-b6-Jdb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Bq-Gg-YeH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TPL-U8-jxG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gA-1q-dgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5019" y="1014"/>
         </scene>
         <!--Chats-->
         <scene sceneID="YOv-5Z-jCk">
