@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -319,173 +318,6 @@
             </objects>
             <point key="canvasLocation" x="1960" y="1326"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="HbQ-Va-YWo">
-            <objects>
-                <viewController id="YqH-Yr-n6D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5L0-Gu-8tI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-LV-ed5">
-                                <rect key="frame" x="16" y="60.999999999999986" width="32" height="28.666666666666686"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="Bih-Rv-MFy"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0nv-cN-dYH">
-                                <rect key="frame" x="344" y="57.333333333333371" width="33" height="34"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32.333333333333329" id="gjl-Ub-EZY"/>
-                                    <constraint firstAttribute="width" constant="33" id="x1Z-Fn-Bj0"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="india-game-dev 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8i6-i9-FEB">
-                                <rect key="frame" x="0.0" y="107" width="393" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4Q-ZN-Bb7">
-                                <rect key="frame" x="146.66666666666666" y="232" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="idgcLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jWZ-Ja-Ocl">
-                                <rect key="frame" x="335" y="270" width="42" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="RVX-sO-b9h"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Indian Game Developer " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBy-rP-1Sx">
-                                <rect key="frame" x="16" y="259" width="232" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="pPf-dx-H2J"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiI-bF-nXV">
-                                <rect key="frame" x="16" y="280" width="173" height="26"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HJs-8u-VtC">
-                                <rect key="frame" x="30" y="337" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-BT-Kso">
-                                <rect key="frame" x="60" y="338" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="calendar.badge.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fcE-rx-99Y">
-                                <rect key="frame" x="32" y="368.66666666666674" width="21" height="21"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="18.333333333333329" id="tEy-IB-gh4"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S5-fA-649">
-                                <rect key="frame" x="58" y="367" width="36" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-DH-lEY">
-                                <rect key="frame" x="212" y="367" width="38" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGo-Ga-eWF">
-                                <rect key="frame" x="16" y="410" width="1606.3333333333333" height="119"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="119" id="LUb-ZQ-29T"/>
-                                </constraints>
-                                <string key="text">This year IGDC will feature 5,000 attendees, 150+ sessions, 200+ speakers IGDC Awards, covering 10 categories and two special jury awards. In addition, the event is committed to being a completely green event.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-20-tIx">
-                                <rect key="frame" x="224" y="386" width="20" height="19.666666666666686"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="WYL-l5-br1"/>
-                                </constraints>
-                            </imageView>
-                            <tabBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-OO-sBA">
-                                <rect key="frame" x="3" y="769" width="393" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="CtJ-WF-xl7"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Search" image="magnifyingglass.circle.fill" catalog="system" id="JTT-XO-tLN"/>
-                                    <tabBarItem title="Explore" image="map.fill" catalog="system" selectedImage="map.fill" id="ZcC-rp-ZAI"/>
-                                    <tabBarItem title="Chats" image="message.fill" catalog="system" id="G3P-4i-77m"/>
-                                    <tabBarItem title="Profile" image="person.crop.circle.fill" catalog="system" id="5Ai-IQ-z0b">
-                                        <imageReference key="selectedImage" image="person.crop.circle.fill" catalog="system" symbolScale="default" variableValue="0.20000000000000007"/>
-                                    </tabBarItem>
-                                </items>
-                                <color key="tintColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <tabBarAppearance key="standardAppearance"/>
-                            </tabBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq2-J2-GIt">
-                                <rect key="frame" x="22" y="696" width="355" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="USb-Hr-BDT"/>
-                                </constraints>
-                                <color key="tintColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Join" cornerStyle="large">
-                                    <color key="baseBackgroundColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-q9-bjP">
-                                <rect key="frame" x="16" y="550" width="124" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="Hkf-nw-Qug"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="myfriends" translatesAutoresizingMaskIntoConstraints="NO" id="Mwa-v8-EGo">
-                                <rect key="frame" x="22" y="584" width="249" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="4mT-EW-wx0"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="VPu-mD-HWL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="leading" secondItem="5L0-Gu-8tI" secondAttribute="leadingMargin" id="4wC-Xk-Ld8"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="bottom" secondItem="jWZ-Ja-Ocl" secondAttribute="bottom" id="PSk-WP-D1C"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="leading" secondItem="oGo-Ga-eWF" secondAttribute="leading" id="UKX-PK-Iu7"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="leading" secondItem="c5c-LV-ed5" secondAttribute="leading" id="Uz4-Ev-M5r"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="leading" secondItem="qBy-rP-1Sx" secondAttribute="leading" id="Yq5-01-ora"/>
-                            <constraint firstItem="kqh-BT-Kso" firstAttribute="top" secondItem="tiI-bF-nXV" secondAttribute="bottom" constant="32" id="elb-3p-8Gv"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="leading" secondItem="ks7-q9-bjP" secondAttribute="leading" id="fwM-2v-dKv"/>
-                            <constraint firstItem="tiI-bF-nXV" firstAttribute="top" secondItem="5L0-Gu-8tI" secondAttribute="top" constant="280" id="vsd-ZB-274"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="PoE-0s-TTk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRb-Sp-e4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4843.5114503816794" y="-49.295774647887328"/>
-        </scene>
         <!--Chats-->
         <scene sceneID="vgL-Kq-hDj">
             <objects>
@@ -528,20 +360,8 @@
         <image name="Onboaridng text2" width="1324" height="516"/>
         <image name="Profile image" width="528" height="528"/>
         <image name="Progress 1" width="1340" height="16"/>
-        <image name="calendar.badge.checkmark" catalog="system" width="128" height="109"/>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
-        <image name="clock" catalog="system" width="128" height="123"/>
-        <image name="idgcLogo.png" width="39" height="36"/>
-        <image name="india-game-dev 1.png" width="393" height="218"/>
-        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
-        <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
         <image name="message" catalog="system" width="128" height="116"/>
-        <image name="message.fill" catalog="system" width="128" height="114"/>
-        <image name="myfriends" width="804" height="204"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
