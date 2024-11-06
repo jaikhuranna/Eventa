@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreLocation
 
-class HomeViewController: UIViewController {
+class ExploreViewController: UIViewController {
 
+    @IBOutlet weak var locationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationLabel.text = "Chennai, Tamil Nadu"
     }
     
 
