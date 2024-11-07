@@ -44,7 +44,7 @@ let User0 = EventaUser(
     profilePhoto: UIImage(named: "ProfilePhoto") ?? UIImage(),
     interestTags: ["Rock music", "Video Games", "3D art", "Blender", "Vinyl records", "Art"],
     hobbies: [
-        Hobby(description: "I love old classic music, from punk, rock to jazz...", photo: UIImage(named: "hobbyPhoto1git") ?? UIImage()),
+        Hobby(description: "I love old classic music, from punk, rock to jazz...", photo: UIImage(named: "hobbyPhoto1") ?? UIImage()),
         Hobby(description: "Exploring digital art and patterns.", photo: UIImage(named: "hobbyPhoto2") ?? UIImage())
     ],
     tagline: "Retro Music Lover & 3D Artist"

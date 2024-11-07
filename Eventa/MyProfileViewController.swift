@@ -62,4 +62,8 @@ class myProfileViewController: UIViewController, UICollectionViewDataSource, UIT
         cell.configure(with: hobby)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
 }
