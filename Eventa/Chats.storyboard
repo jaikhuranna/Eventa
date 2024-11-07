@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Screen-->
+        <!--Chats-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ChatScreen" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ULE-Tw-miG">
-                                <rect key="frame" x="0.0" y="141" width="393" height="677"/>
+                                <rect key="frame" x="0.0" y="141" width="393" height="628"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IJ-CK-mD1">
@@ -40,6 +40,8 @@
                             <constraint firstItem="0IJ-CK-mD1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="xks-dS-uEr"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Chats" image="message.fill" catalog="system" id="xaM-kj-GTP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ULE-Tw-miG" id="P28-5o-F4F"/>
                     </connections>
@@ -50,6 +52,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
