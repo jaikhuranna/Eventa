@@ -19,6 +19,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
         locationLabel.text = "Chennai"
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout( generateLayout(), animated: true)
+//        collectionView.
     }
     
 
@@ -52,14 +53,14 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
             let sectionType = DataModel.Sections[Section]
             switch sectionType {
             case .upcoming:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.5))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.5))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .absolute(220))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 2)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPaging
                 section.interGroupSpacing = 10
-                section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
                 return section
             default:
                 return nil
