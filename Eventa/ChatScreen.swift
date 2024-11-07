@@ -13,7 +13,6 @@ class ChatScreen: UIViewController {
     
     let names = [
         "Aryan Kacker",
-        "Prathu V",
         "Tanya Kacker",
         "Shruti Kacker",
         "Anuj Kacker",
