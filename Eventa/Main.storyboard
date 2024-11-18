@@ -504,10 +504,10 @@
             </objects>
             <point key="canvasLocation" x="6154.1984732824421" y="4.9295774647887329"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Onboarding Navigation View Controller-->
         <scene sceneID="mgw-Y5-3jw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vs8-kx-PIY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vs8-kx-PIY" customClass="OnboardingNavigationViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lod-76-HTi">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

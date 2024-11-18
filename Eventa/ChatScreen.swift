@@ -119,7 +119,13 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
     //Delegates
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me!")
+        let selectedUser = names[indexPath.row]
+        
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "ChatDetailScreen") as? ChatDetailScreenViewController else { return }
+        
+        detailVC.name = selectedUser
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
