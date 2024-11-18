@@ -1,7 +1,6 @@
 //
 //  OnboardingNavigationViewController.swift
 //  Eventa
-//
 //  Created by Aryan on 18/11/24.
 //
 
