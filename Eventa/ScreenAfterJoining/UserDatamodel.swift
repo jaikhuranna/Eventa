@@ -39,7 +39,7 @@ let users: [EventaUser] = [
             Hobby(description: "I love old classic music, from punk, rock to jazz", photo: UIImage(named: "hobbyPhoto1") ?? UIImage()),
             Hobby(description: "Exploring digital art and patterns.", photo: UIImage(named: "hobbyPhoto2") ?? UIImage())
         ],
-        tagline: "Retro Music • 3D Artist"
+        tagline: "Retro Music • 3D Art"
     ),
     EventaUser(
         usernumber: 1,

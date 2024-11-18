@@ -12,7 +12,6 @@ class myProfileViewController: UIViewController, UICollectionViewDataSource, UIT
     
     // Outlets
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageGenderLabel: UILabel!
     @IBOutlet weak var interestTagsCollectionView: UICollectionView!
@@ -35,7 +34,6 @@ class myProfileViewController: UIViewController, UICollectionViewDataSource, UIT
     
     func loadUserData() {
         profileImageView.image = user.profilePhoto
-        taglineLabel.text = user.tagline
         nameLabel.text = user.name
         ageGenderLabel.text = "\(user.age) • \(user.gender)"
     }
@@ -49,6 +47,13 @@ class myProfileViewController: UIViewController, UICollectionViewDataSource, UIT
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCollectionViewCell
         cell.configure(with: user.interestTags[indexPath.item])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath:
+     IndexPath) -> CGSize {
+        
+      let width = 300// Replace with your desired width
+      let height = 300 // Replace with your desired height
+      return CGSize(width: width, height: height)
     }
     
     // MARK: - TableView DataSource and Delegate for Hobbies
