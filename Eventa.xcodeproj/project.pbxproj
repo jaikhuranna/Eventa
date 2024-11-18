@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		173EE9812CEBD2530087678B /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 173EE9802CEBD2530087678B /* MessageKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3DBED9642CB7A3A800778850 /* Eventa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173EE9812CEBD2530087678B /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 			);
 			name = Eventa;
 			packageProductDependencies = (
+				173EE9802CEBD2530087678B /* MessageKit */,
 			);
 			productName = Eventa;
 			productReference = 3DBED9642CB7A3A800778850 /* Eventa.app */;
@@ -119,6 +125,9 @@
 			);
 			mainGroup = 3DBED95B2CB7A3A800778850;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				173EE97F2CEBD2530087678B /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3DBED9652CB7A3A800778850 /* Products */;
 			projectDirPath = "";
@@ -345,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		173EE97F2CEBD2530087678B /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		173EE9802CEBD2530087678B /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 173EE97F2CEBD2530087678B /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DBED95C2CB7A3A800778850 /* Project object */;
 }
