@@ -16,5 +16,10 @@ class upcomingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var eventDescription: UILabel!
     
+    @IBOutlet weak var dateAndTimeOfEvent: UILabel!
+    
+    @IBOutlet weak var CostGetTicketButton: UIButton!
+    
+    @IBOutlet weak var CostLabelUnderLabel: UILabel!
     
 }
