@@ -7,23 +7,70 @@
 
 import UIKit
 
-class InterestsViewController: UIViewController {
-
+class InterestsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // Data for categories
+    let categories: [(name: String, emoji: String)] = [
+        ("Digital Art", "💻"), ("Community", "🙌"), ("Music & Entertainment", "🎤"), ("Rock", "🎸"),
+        ("Health", "💉"), ("Food & drink", "🍟"), ("Family & Education", "👨‍👩‍👧‍👦"),
+        ("Sport", "⚽️"), ("Fashion", "👠"), ("Film & Media", "🎞️"),
+        ("Home & Lifestyle", "🏡"), ("Design", "🎨"), ("Gaming", "🎮"),
+        ("Science & Tech", "🔬"), ("School & Education", "📚"),
+        ("Holiday", "⛱️"), ("Travel", "✈️")
+    ]
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.allowsMultipleSelection = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: UICollectionViewDataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestsCollectionViewCell", for: indexPath) as! InterestsCollectionViewCell
+        let category = categories[indexPath.row]
+        cell.configure(name: category.name, emoji: category.emoji)
+        return cell
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? InterestsCollectionViewCell else { return }
+        print("fneifoeif")
+        cell.setSelected(true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? InterestsCollectionViewCell else { return }
+        cell.setSelected(false)
+    }
+    
+    // MARK: UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Calculate dynamic width based on text
+        let text = categories[indexPath.row].name
+        let approximateWidth = text.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width + 40
+        return CGSize(width: approximateWidth, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 12
+    }
 }

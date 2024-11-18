@@ -18,7 +18,7 @@ class ChatScreen: UIViewController {
         "Anuj Kacker",
         "Riya Sharma",
         "Karan Mehta",
-        "Simran Patel",
+        "Simran Sharma",
         "Vikram Singh",
         "Priya Joshi",
         "Rajesh Verma",
