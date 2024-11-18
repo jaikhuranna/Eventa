@@ -107,7 +107,6 @@ class ChatScreen: UIViewController {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "ChatTableViewCell", bundle: nil)
-        
         tableView.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
 
         tableView.delegate = self

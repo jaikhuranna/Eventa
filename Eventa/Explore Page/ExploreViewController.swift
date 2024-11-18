@@ -15,6 +15,8 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         locationLabel.text = "Chennai"
         collectionView.dataSource = self

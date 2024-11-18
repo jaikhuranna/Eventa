@@ -145,7 +145,7 @@
         <!--Home Tab Bar Controller-->
         <scene sceneID="oav-ZE-9lE">
             <objects>
-                <tabBarController id="KxB-cr-j2x" customClass="HomeTabBarController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="KxB-cr-j2x" customClass="HomeTabBarController" customModule="Eventa" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Bm-iu-W3W">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

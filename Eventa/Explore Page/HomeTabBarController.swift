@@ -11,6 +11,7 @@ class HomeTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        performSegue(withIdentifier: "Onboarding", sender: self)
     }
 
 }

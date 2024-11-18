@@ -9,17 +9,42 @@ import UIKit
 
 class ProfileBuilding1ViewController: UIViewController {
 
+    @IBOutlet weak var nameOutlet: UITextField!
+    
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var genderLabel: UILabel!
     
     var data = ["Male", "Female"]
     
+    @IBOutlet weak var profilePicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerView.dataSource = self
         pickerView.delegate = self
+        
+        tapGesture()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profileInfo " {
+            let vc = segue.destination as! ProfilePictureDisplayViewController
+            vc.userName = nameOutlet.text
+        }
+    }
+    
+    func tapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        profilePicture.isUserInteractionEnabled = true
+        profilePicture.addGestureRecognizer(tap)
+    }
+    
+    @objc func imageTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
     }
 
 }
