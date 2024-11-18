@@ -6,7 +6,7 @@
     //
 import UIKit
 
-class ScreenAfterJoiningViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class Main: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     

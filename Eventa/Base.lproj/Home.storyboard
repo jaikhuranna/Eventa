@@ -354,15 +354,27 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-uh-iyx">
+                                <rect key="frame" x="44" y="681" width="305" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button For tesing screen after joining"/>
+                                <connections>
+                                    <segue destination="H82-6m-91Z" kind="show" id="zo4-gz-APc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QyU-tb-KOe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dmg-uh-iyx" firstAttribute="top" secondItem="dab-K5-3sO" secondAttribute="bottom" constant="596" id="3GD-gl-JJh"/>
                             <constraint firstItem="46s-iC-0hI" firstAttribute="leading" secondItem="QyU-tb-KOe" secondAttribute="leading" constant="8" id="M7t-md-xSp"/>
+                            <constraint firstItem="QyU-tb-KOe" firstAttribute="trailing" secondItem="dmg-uh-iyx" secondAttribute="trailing" constant="44" id="TrK-rd-2Fy"/>
                             <constraint firstItem="QyU-tb-KOe" firstAttribute="bottom" secondItem="46s-iC-0hI" secondAttribute="bottom" id="aMj-0R-d2m"/>
+                            <constraint firstItem="dmg-uh-iyx" firstAttribute="leading" secondItem="QyU-tb-KOe" secondAttribute="leading" constant="44" id="hjB-HX-mPl"/>
                             <constraint firstItem="dab-K5-3sO" firstAttribute="leading" secondItem="QyU-tb-KOe" secondAttribute="leading" constant="8" id="ldW-CC-Mvb"/>
                             <constraint firstItem="dab-K5-3sO" firstAttribute="top" secondItem="QyU-tb-KOe" secondAttribute="top" constant="6" id="oPF-YS-TA9"/>
                             <constraint firstItem="QyU-tb-KOe" firstAttribute="trailing" secondItem="46s-iC-0hI" secondAttribute="trailing" constant="8" id="r9K-h6-7c5"/>
+                            <constraint firstItem="QyU-tb-KOe" firstAttribute="bottom" secondItem="dmg-uh-iyx" secondAttribute="bottom" constant="53" id="yP1-kP-YHH"/>
                             <constraint firstItem="46s-iC-0hI" firstAttribute="top" secondItem="dab-K5-3sO" secondAttribute="bottom" constant="16" id="zS9-2r-mx0"/>
                         </constraints>
                     </view>
@@ -375,6 +387,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zM-iL-Jif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-370.2290076335878" y="-111.26760563380282"/>
+        </scene>
+        <!--ScreenAfterJoining-->
+        <scene sceneID="BrI-0w-TVE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScreenAfterJoining" id="H82-6m-91Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3Za-6o-Ny4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ank-6R-8m2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="-81"/>
         </scene>
         <!--Chats-->
         <scene sceneID="17H-8a-kC4">

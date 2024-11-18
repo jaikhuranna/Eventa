@@ -19,7 +19,6 @@ struct Message: MessageType{
     var sentDate: Date
     var kind: MessageKit.MessageKind
     
-    
 }
 
 class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate  {
