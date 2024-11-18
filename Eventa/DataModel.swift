@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 // MARK: Types of Events
 enum Section {
     case upcoming, friendsAttending, forYou
