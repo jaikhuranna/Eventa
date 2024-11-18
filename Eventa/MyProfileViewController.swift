@@ -19,7 +19,7 @@ class myProfileViewController: UIViewController, UICollectionViewDataSource, UIT
     @IBOutlet weak var hobbiesTableView: UITableView!
     
     // Data
-    var user: EventaUser = User0 // Replace with actual user data
+    var user: EventaUser = users[0] // Replace with actual user data
     
     override func viewDidLoad() {
         super.viewDidLoad()
