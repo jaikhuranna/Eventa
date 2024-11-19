@@ -46,6 +46,7 @@ func createDate(from string: String) -> Date? {
 }
 class DataModel{
     
+    static let SectionTitles = ["Upcoming", "Friends Attending"]
     
     static let Sections: [Section] = [.upcoming, .friendsAttending]
    
@@ -58,4 +59,8 @@ class DataModel{
         Event(title: "Food & Wine Expo", description: "A food lover’s paradise featuring top chefs, wine tasting, and gourmet food stalls.", date: createDate(from: "2024-09-10 11:00:00") ?? Date(), time: "11:00 AM", tagline: "Taste the best!", image: "SXSW", cost: 120.00)
     ]
     
+    static let upcomingEvents: [Event] = Events
+    
+    
+    static let friendsAttending: [Event] = Events
 }
