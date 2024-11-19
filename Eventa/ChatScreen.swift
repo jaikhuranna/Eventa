@@ -119,7 +119,7 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
     //Delegates
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedUser = names[indexPath.row]
+        let selectedUser = users[indexPath.row].name
         
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "ChatDetailScreen") as? ChatDetailScreenViewController else { return }
         
@@ -133,17 +133,19 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
         
-        cell.headingLabel?.text = names[indexPath.row]
+        cell.headingLabel?.text = users[indexPath.row].name
         
         cell.bodyLabel?.text = messages[indexPath.row]
         
-        cell.imageOutlet.image = images[indexPath.row]
+//        cell.imageOutlet.image = images[indexPath.row]
+        
+        cell.imageOutlet.image = users[indexPath.row].profilePhoto
         
         cell.timeLabel?.text = timeData[indexPath.row]
         

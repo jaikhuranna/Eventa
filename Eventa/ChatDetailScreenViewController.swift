@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ChatDetailScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate{
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var question2: UILabel!
+    
+    @IBOutlet weak var question1: UILabel!
+    
+    @IBOutlet weak var question3: UILabel!
     
     let interests = [
         (emoji: "🎵", title: "Vinyl records", rating: "3"),
@@ -78,10 +85,25 @@ class ChatDetailScreenViewController: UIViewController, UICollectionViewDataSour
         
         nameOutlet.text = name
         
-        nameRatedOutlet.text = "\(name!) rated your profile"
+        nameRatedOutlet.text = "Similar interests between you and \(name!)"
+        
+        question1.text = DataModel.Events[0].icebreakerQuestions[0]
+        question2.text = DataModel.Events[0].icebreakerQuestions[1]
+        question3.text = DataModel.Events[0].icebreakerQuestions[2]
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        let labels = [question1, question2, question3]
+        
+        for label in labels {
+            label?.layer.cornerRadius = 10
+            label?.layer.masksToBounds = true // Ensures corners are clipped
+            label?.backgroundColor = UIColor.purple
+            label?.textColor = UIColor.white // Optional: Adjust text color for better visibility
+            label?.textAlignment = .center
+            
+        }
         
     }
 
