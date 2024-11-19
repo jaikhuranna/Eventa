@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mAg-96-rAZ">
-                                <rect key="frame" x="10" y="155" width="373" height="614"/>
+                                <rect key="frame" x="10" y="103" width="373" height="666"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dab-K5-3sO">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="20"/>
@@ -39,7 +39,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46s-iC-0hI">
-                                        <rect key="frame" x="0.0" y="20" width="373" height="594"/>
+                                        <rect key="frame" x="0.0" y="20" width="373" height="646"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GLW-4e-7lN">
                                             <size key="itemSize" width="370" height="144"/>
@@ -451,8 +451,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tvV-El-Z6v" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="map.fill" catalog="system" id="TyW-41-1zX"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fWZ-9R-RJZ">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fWZ-9R-RJZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
