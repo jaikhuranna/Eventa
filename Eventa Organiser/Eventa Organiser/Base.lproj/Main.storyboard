@@ -32,6 +32,7 @@ Eventa Organiser</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Event"/>
                                         <connections>
+                                            <action selector="pressAddEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DT-7u-6Ka"/>
                                             <segue destination="28z-Ms-GHA" kind="show" id="yUs-3F-DGL"/>
                                         </connections>
                                     </button>

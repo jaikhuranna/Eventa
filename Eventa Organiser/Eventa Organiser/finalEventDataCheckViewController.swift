@@ -20,7 +20,8 @@ class finalEventDataCheckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        finalImage.layer.cornerRadius = 16
+        
         finalImage.image = AddImageViewController.imageToSend
         titleLabel.text = AddEventViewController.eventTitle
         costLabel.text = String(AddEventViewController.eventCost)
@@ -39,9 +40,13 @@ class finalEventDataCheckViewController: UIViewController {
             date: AddEventViewController.eventEndDate,
             time: startDateLabel.text ?? "No date" ,
             tagline: taglineLabel.text ?? "tagline not found",
-            image: "Image",
+            imageURL: "Image",
             cost: Int(costLabel.text ?? "0") ?? 0,
             icebreakerQuestions: [String()]))
+        
+        let alert = UIAlertController(title: "Event Added", message: "Your event has been added successfully", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     

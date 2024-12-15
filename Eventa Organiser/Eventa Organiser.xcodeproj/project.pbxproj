@@ -11,6 +11,7 @@
 		3DCF016C2D0F50EC007E0269 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016B2D0F50EC007E0269 /* FirebaseCore */; };
 		3DCF016E2D0F50EC007E0269 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016D2D0F50EC007E0269 /* FirebaseDatabase */; };
 		3DCF01702D0F50EC007E0269 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016F2D0F50EC007E0269 /* FirebaseFirestore */; };
+		3DCF01742D0F620B007E0269 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF01732D0F620B007E0269 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 				3DCF016E2D0F50EC007E0269 /* FirebaseDatabase in Frameworks */,
 				3DCF01702D0F50EC007E0269 /* FirebaseFirestore in Frameworks */,
 				3DCF016C2D0F50EC007E0269 /* FirebaseCore in Frameworks */,
+				3DCF01742D0F620B007E0269 /* FirebaseStorage in Frameworks */,
 				3DCF016A2D0F50EC007E0269 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +95,7 @@
 				3DCF016B2D0F50EC007E0269 /* FirebaseCore */,
 				3DCF016D2D0F50EC007E0269 /* FirebaseDatabase */,
 				3DCF016F2D0F50EC007E0269 /* FirebaseFirestore */,
+				3DCF01732D0F620B007E0269 /* FirebaseStorage */,
 			);
 			productName = "Eventa Organiser";
 			productReference = 3D8A60072D0EE7F2009EEEC7 /* Eventa Organiser.app */;
@@ -385,6 +388,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		3DCF01732D0F620B007E0269 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

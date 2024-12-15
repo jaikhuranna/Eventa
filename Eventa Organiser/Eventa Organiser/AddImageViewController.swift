@@ -17,6 +17,7 @@ class AddImageViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imageView.layer.cornerRadius = 16
         // Do any additional setup after loading the view.
     }
     

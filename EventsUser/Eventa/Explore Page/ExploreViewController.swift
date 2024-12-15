@@ -81,7 +81,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
             if let cell = cell as? upcomingCollectionViewCell{
                 cell.eventDescription.text = upcomingEvent.description
                 cell.eventName.text = upcomingEvent.title
-                cell.eventImageView.image = UIImage(named: upcomingEvent.image)
+                cell.eventImageView.image = UIImage(named: upcomingEvent.imageURL)
                 cell.eventImageView.layer.cornerRadius = 16
                 cell.CostLabelUnderLabel.text = String(upcomingEvent.cost)
                 cell.dateAndTimeOfEvent.text = upcomingEvent.date.description
@@ -96,7 +96,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
                 cell.FriendCellEventDataLabel.text = SeeWhereYourFriendsAreGoingEvent.date.description;
                 cell.FriendCellEventNameLabel.text = SeeWhereYourFriendsAreGoingEvent.title;
                 cell.FriendCellEventTimeLabel.text = SeeWhereYourFriendsAreGoingEvent.time.description;
-                cell.FriendsViewImageView.image = UIImage(named: SeeWhereYourFriendsAreGoingEvent.image)
+                cell.FriendsViewImageView.image = UIImage(named: SeeWhereYourFriendsAreGoingEvent.imageURL)
 //                cell.FriendsViewImageView.layer.cornerRadius
             }
             return cell

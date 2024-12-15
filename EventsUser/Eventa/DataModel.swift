@@ -25,7 +25,7 @@ public struct Event {
     var date: Date
     var time: String
     var tagline: String
-    var image: String
+    var imageURL: String
     var cost: Int // New field for event cost
     var icebreakerQuestions: [String] // Questions for attendees
 
@@ -64,23 +64,23 @@ class DataModel {
     static let db = Firestore.firestore()
     
     static func saveEvent(event: Event) {
-           let eventRef = db.collection("events").document(event.eventID.uuidString)
-           eventRef.setData([
-               "title": event.title,
-               "description": event.description,
-               "date": event.date,
-               "tagline": event.tagline,
-               "image": event.image,
-               "cost": event.cost,
-               "icebreakerQuestions": event.icebreakerQuestions
-           ]) { error in
-               if let error = error {
-                   print("Error saving event: \(error)")
-               } else {
-                   print("Event saved successfully")
-               }
-           }
-       }
+         let eventRef = db.collection("events").document(event.eventID.uuidString)
+         eventRef.setData([
+             "title": event.title,
+             "description": event.description,
+             "date": event.date,
+             "tagline": event.tagline,
+             "image": event.imageURL,
+             "cost": event.cost,
+             "icebreakerQuestions": event.icebreakerQuestions
+         ]) { error in
+             if let error = error {
+                 print("Error saving event: \(error)")
+             } else {
+                 print("Event saved successfully")
+             }
+         }
+     }
     
     static func fetchEvents(completion: @escaping ([Event]) -> Void) {
         db.collection("events").getDocuments { (querySnapshot, error) in
@@ -100,13 +100,74 @@ class DataModel {
                     date: (data["date"] as? Timestamp)?.dateValue() ?? Date(),
                     time: "", // Time can be calculated if needed
                     tagline: data["tagline"] as? String ?? "",
-                    image: data["image"] as? String ?? "",
+                    imageURL: data["image"] as? String ?? "",
                     cost: data["cost"] as? Int ?? 0,
                     icebreakerQuestions: data["icebreakerQuestions"] as? [String] ?? []
                 )
                 events.append(event)
             }
             completion(events)
+        }
+    }
+    
+    
+    public struct Chat {
+        var senderName: String
+        var message: String
+        var imageURL: String
+        var timestamp: String
+    }
+    
+    static var fetchedChats = [Chat]()
+    
+    static func saveChats(names: [String], messages: [String], timeData: [String]) {
+        let chatsCollection = db.collection("chats")
+
+        for index in 0..<names.count {
+            let name = names[index]
+            let message = messages[index]
+            let time = timeData[index]
+            let imageURL = "Profile image" // Since images are not being uploaded yet.
+
+            // Prepare the chat data
+            let chatData: [String: Any] = [
+                "senderName": name,
+                "message": message,
+                "imageURL": imageURL,
+                "timestamp": time
+            ]
+
+            // Save chat data to Firestore
+            chatsCollection.addDocument(data: chatData) { error in
+                if let error = error {
+                    print("Error saving chat: \(error)")
+                } else {
+                    print("Chat saved successfully: \(name)")
+                }
+            }
+        }
+    }
+    
+    static func fetchChats(completion: @escaping () -> Void) {
+        db.collection("chats").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching chats: \(error)")
+                completion()  // Return after failure
+                return
+            }
+            
+            fetchedChats = querySnapshot?.documents.compactMap { document in
+                let data = document.data()
+                let name = data["name"] as? String ?? ""
+                let message = data["message"] as? String ?? ""
+                let imageURL = data["imageURL"] as? String ?? ""
+                let time = data["time"] as? String ?? ""
+                
+                // Create a Chat object for each document and return
+                return Chat(senderName: name, message: message, imageURL: imageURL, timestamp: time)
+            } ?? []
+            
+            completion()  // Return when fetching is complete
         }
     }
 }

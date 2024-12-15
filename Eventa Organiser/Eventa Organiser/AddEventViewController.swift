@@ -33,10 +33,11 @@ class AddEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @IBAction func pressNextButton(_ sender: Any) {
-        navigationController?.isNavigationBarHidden = false
         AddEventViewController.eventTitle = nameTextFeild.text!
         AddEventViewController.eventDescription = descriptionTextFeild.text!
         AddEventViewController.eventTagline = taglineTextFeild.text!
