@@ -26,7 +26,7 @@ public struct Event {
     var time: String
     var tagline: String
     var image: String
-    var cost: Double // New field for event cost
+    var cost: Int // New field for event cost
     var icebreakerQuestions: [String] // Questions for attendees
 
     func formattedDate() -> String {
@@ -90,7 +90,7 @@ class DataModel {
                 return
             }
             
-            var events = [Event]()
+            events = [Event]()
             for document in querySnapshot!.documents {
                 let data = document.data()
                 let event = Event(
@@ -101,7 +101,7 @@ class DataModel {
                     time: "", // Time can be calculated if needed
                     tagline: data["tagline"] as? String ?? "",
                     image: data["image"] as? String ?? "",
-                    cost: data["cost"] as? Double ?? 0.0,
+                    cost: data["cost"] as? Int ?? 0,
                     icebreakerQuestions: data["icebreakerQuestions"] as? [String] ?? []
                 )
                 events.append(event)
