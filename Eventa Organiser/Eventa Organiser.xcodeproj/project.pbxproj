@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3DCF016A2D0F50EC007E0269 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF01692D0F50EC007E0269 /* FirebaseAnalytics */; };
+		3DCF016C2D0F50EC007E0269 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016B2D0F50EC007E0269 /* FirebaseCore */; };
+		3DCF016E2D0F50EC007E0269 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016D2D0F50EC007E0269 /* FirebaseDatabase */; };
+		3DCF01702D0F50EC007E0269 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF016F2D0F50EC007E0269 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3D8A60072D0EE7F2009EEEC7 /* Eventa Organiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventa Organiser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCF016E2D0F50EC007E0269 /* FirebaseDatabase in Frameworks */,
+				3DCF01702D0F50EC007E0269 /* FirebaseFirestore in Frameworks */,
+				3DCF016C2D0F50EC007E0269 /* FirebaseCore in Frameworks */,
+				3DCF016A2D0F50EC007E0269 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,10 @@
 			);
 			name = "Eventa Organiser";
 			packageProductDependencies = (
+				3DCF01692D0F50EC007E0269 /* FirebaseAnalytics */,
+				3DCF016B2D0F50EC007E0269 /* FirebaseCore */,
+				3DCF016D2D0F50EC007E0269 /* FirebaseDatabase */,
+				3DCF016F2D0F50EC007E0269 /* FirebaseFirestore */,
 			);
 			productName = "Eventa Organiser";
 			productReference = 3D8A60072D0EE7F2009EEEC7 /* Eventa Organiser.app */;
@@ -107,6 +122,9 @@
 			);
 			mainGroup = 3D8A5FFE2D0EE7F2009EEEC7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3D8A60082D0EE7F2009EEEC7 /* Products */;
 			projectDirPath = "";
@@ -335,6 +353,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DCF01692D0F50EC007E0269 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3DCF016B2D0F50EC007E0269 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		3DCF016D2D0F50EC007E0269 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3DCF016F2D0F50EC007E0269 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCF01682D0F50EC007E0269 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D8A5FFF2D0EE7F2009EEEC7 /* Project object */;
 }
