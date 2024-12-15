@@ -374,7 +374,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Explore" largeTitleDisplayMode="always" id="6y6-7O-BdB">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ukj-Mf-JK2"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ukj-Mf-JK2">
+                            <connections>
+                                <segue destination="Fg8-Bx-WqA" kind="presentation" id="vD0-JZ-LUd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="46s-iC-0hI" id="R1i-5b-PvI"/>
@@ -385,6 +389,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zM-iL-Jif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556.48854961832058" y="-111.26760563380282"/>
+        </scene>
+        <!--AddEvent-->
+        <scene sceneID="3p0-Fv-yfr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddEvent" id="Fg8-Bx-WqA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tre-7H-nBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="-455"/>
         </scene>
         <!--EventDetails-->
         <scene sceneID="y9t-dL-PTm">

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Screen-->
+        <!--Messages-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ChatScreen" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ULE-Tw-miG">
-                                <rect key="frame" x="0.0" y="185" width="393" height="584"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iUa-b8-MOs">
@@ -34,27 +34,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IJ-CK-mD1">
-                                <rect key="frame" x="0.0" y="86" width="393" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ULE-Tw-miG" secondAttribute="bottom" id="Ebz-2b-WA8"/>
-                            <constraint firstItem="0IJ-CK-mD1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Loa-Wd-6Tb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ULE-Tw-miG" secondAttribute="trailing" id="Ps9-MX-ulA"/>
-                            <constraint firstItem="ULE-Tw-miG" firstAttribute="top" secondItem="0IJ-CK-mD1" secondAttribute="bottom" constant="78" id="aKf-hP-J2A"/>
                             <constraint firstItem="ULE-Tw-miG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="efj-xf-hHv"/>
-                            <constraint firstItem="ULE-Tw-miG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="82" id="fgW-qM-ukl"/>
-                            <constraint firstItem="0IJ-CK-mD1" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="gmW-3B-kjx"/>
-                            <constraint firstItem="0IJ-CK-mD1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-17" id="xks-dS-uEr"/>
+                            <constraint firstItem="ULE-Tw-miG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fgW-qM-ukl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FOm-9R-Sd1"/>
+                    <navigationItem key="navigationItem" title="Messages" id="FOm-9R-Sd1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ULE-Tw-miG" id="P28-5o-F4F"/>
