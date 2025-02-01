@@ -3,4 +3,108 @@
    uuid = "B3AFFE26-02F3-4091-9663-683620C1B9C1"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eventa Organiser/AddEventViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "AddEventViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - ac7575cfb01ab448"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.taglineTextFeild.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaikhurana/Developer/iOS%20App%20Dev/Eventa/Eventa%20Organiser/Eventa%20Organiser/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - 52ec6a297d7beb94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.taglineTextFeild.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaikhurana/Developer/iOS%20App%20Dev/Eventa/Eventa%20Organiser/Eventa%20Organiser/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - dd446614f926cdc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.taglineTextFeild.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaikhurana/Developer/iOS%20App%20Dev/Eventa/Eventa%20Organiser/Eventa%20Organiser/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - 6bf788c56409d78a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.taglineTextFeild.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - 88a0a3efca23fdb3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Eventa_Organiser.AddEventViewController"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaikhurana/Developer/iOS%20App%20Dev/Eventa/Eventa%20Organiser/Eventa%20Organiser/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "CA1D9613-310F-4E54-BEED-D9C161C74E89 - df67524f8f27a2fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventa_Organiser.AddEventViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Eventa_Organiser.AddEventViewController&gt;"
+                  moduleName = "Eventa Organiser.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaikhurana/Developer/iOS%20App%20Dev/Eventa/Eventa%20Organiser/Eventa%20Organiser/AddEventViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

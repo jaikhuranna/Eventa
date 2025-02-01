@@ -25,6 +25,7 @@ class InterestsViewController: UIViewController, UICollectionViewDataSource, UIC
         
         super.viewDidLoad()
         
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -50,6 +51,7 @@ class InterestsViewController: UIViewController, UICollectionViewDataSource, UIC
         guard let cell = collectionView.cellForItem(at: indexPath) as? InterestsCollectionViewCell else { return }
         print("fneifoeif")
         cell.setSelected(true)
+        cell.backgroundViewContainer.layer.backgroundColor = CGColor(red: 255, green: 0, blue: 0, alpha: 1);
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

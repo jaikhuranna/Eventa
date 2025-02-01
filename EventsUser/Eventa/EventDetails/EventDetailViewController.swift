@@ -17,14 +17,19 @@ class EventDetailViewController: UIViewController {
     @IBOutlet var EvenetDescription: UILabel!
     
     static var indexvar: Int?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         image.image = UIImage(named: DataModel.events[EventDetailViewController.indexvar ?? 0].imageURL) ?? UIImage()
-        DateandTime.text = DataModel.events[EventDetailViewController.indexvar ?? 0].date.description
-        eventName.text = DataModel.events[EventDetailViewController.indexvar ?? 0].title
-        EvenetDescription.text = DataModel.events[EventDetailViewController.indexvar ?? 0].description
+        image.layer.cornerRadius = 16;
+        
+//        DateandTime.text = DataModel.events[EventDetailViewController.indexvar ?? 0].date.description
+//        eventName.text = DataModel.events[EventDetailViewController.indexvar ?? 0].title
+//        EvenetDescription.text = DataModel.events[EventDetailViewController.indexvar ?? 0].description
     }
+    
+    
     
 }

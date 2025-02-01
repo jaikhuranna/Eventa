@@ -19,7 +19,6 @@ class ChatScreen: UIViewController {
                 self.tableView.reloadData()  // Or collectionView.reloadData()
             }
         }
-
         
         let nib = UINib(nibName: "ChatTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
@@ -27,8 +26,8 @@ class ChatScreen: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
 }
+
 extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
     
     //Delegates
@@ -50,7 +49,6 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataModel.fetchedChats.count
     }
-    
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
 //        
@@ -58,7 +56,7 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
 //        
 //        cell.bodyLabel?.text =  messages[indexPath.row]
 //
-////        cell.imageOutlet.image = images[indexPath.row]
+//        cell.imageOutlet.image = images[indexPath.row]
 //        
 //        cell.imageOutlet.image = users[indexPath.row].profilePhoto
 //        
@@ -88,5 +86,4 @@ extension ChatScreen: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
 }

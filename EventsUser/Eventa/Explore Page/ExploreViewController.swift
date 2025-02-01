@@ -55,7 +55,6 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
 
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
             return DataModel.upcomingEvents.count
@@ -141,5 +140,4 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         }
         return layout
     }
-    
 }
