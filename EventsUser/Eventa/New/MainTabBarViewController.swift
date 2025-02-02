@@ -13,11 +13,13 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if !onbarded {
-            performSegue(withIdentifier: "onboarding", sender: self)
-        }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if !onbarded {
+            performSegue(withIdentifier: "onboarding", sender: self)
+            onbarded = true;
+        }
+    }
 
 }
