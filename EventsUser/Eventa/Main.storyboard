@@ -671,7 +671,7 @@
         <!--Let’s get to know you-->
         <scene sceneID="Jz0-Qd-lHI">
             <objects>
-                <viewController storyboardIdentifier="On2" title="Let’s get to know you" id="LJQ-St-LSZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="On2" title="Let’s get to know you" id="LJQ-St-LSZ" customClass="getToKnowYouViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPy-H0-pgU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -706,6 +706,9 @@
                                                 <rect key="frame" x="0.0" y="25.333333333333314" width="353" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="editedFeild:" destination="LJQ-St-LSZ" eventType="editingChanged" id="woH-IT-YvV"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -756,15 +759,18 @@
                             <constraint firstItem="fMp-p1-ju2" firstAttribute="trailing" secondItem="F94-ZZ-5rK" secondAttribute="trailing" constant="20" id="utJ-f6-TNc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NameFeild" destination="FEs-wP-8qT" id="3uj-5X-fXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0g-gj-bJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4527" y="1491"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Tagline View Controller-->
         <scene sceneID="da3-WF-3dL">
             <objects>
-                <viewController storyboardIdentifier="On3" id="Ad7-Hz-goH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="On3" id="Ad7-Hz-goH" customClass="getTaglineViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhw-J8-0qy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -831,6 +837,9 @@
                             <constraint firstItem="I5p-7L-os1" firstAttribute="top" secondItem="Wg1-Oa-6oD" secondAttribute="bottom" constant="96" id="yeX-8B-d2P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NameLabel" destination="rSL-Jq-xC1" id="zhp-AV-Snz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYJ-1d-4x7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -861,8 +870,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WT6-Sw-m97">
-                                <rect key="frame" x="29" y="186.33333333333331" width="335" height="631.66666666666674"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WT6-Sw-m97">
+                                <rect key="frame" x="29" y="186.33333333333331" width="335" height="518.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5XZ-hI-uUC">
                                     <size key="itemSize" width="128" height="128"/>
@@ -922,16 +931,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="www-pD-wX4">
+                                <rect key="frame" x="41" y="721" width="311" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="J8F-vE-Vpv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Explore!"/>
+                                <connections>
+                                    <action selector="endOnboarding:" destination="To5-qX-vA7" eventType="touchUpInside" id="hlL-Cd-b22"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7YW-DL-yX5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7YW-DL-yX5" firstAttribute="bottom" secondItem="WT6-Sw-m97" secondAttribute="bottom" id="3nr-GK-r36"/>
+                            <constraint firstItem="7YW-DL-yX5" firstAttribute="trailing" secondItem="www-pD-wX4" secondAttribute="trailing" constant="41" id="0mh-xD-PAX"/>
                             <constraint firstItem="ZID-j6-NcT" firstAttribute="top" secondItem="7YW-DL-yX5" secondAttribute="top" constant="50" id="Aar-31-Q0e"/>
                             <constraint firstItem="ZID-j6-NcT" firstAttribute="leading" secondItem="7YW-DL-yX5" secondAttribute="leading" constant="29" id="Ad2-bb-5Jd"/>
+                            <constraint firstItem="www-pD-wX4" firstAttribute="top" secondItem="WT6-Sw-m97" secondAttribute="bottom" constant="16" id="LNN-aL-cfW"/>
                             <constraint firstItem="WT6-Sw-m97" firstAttribute="top" secondItem="ZID-j6-NcT" secondAttribute="bottom" constant="30" id="VcM-w7-lIQ"/>
                             <constraint firstItem="7YW-DL-yX5" firstAttribute="trailing" secondItem="WT6-Sw-m97" secondAttribute="trailing" constant="29" id="WrD-I8-Nmf"/>
+                            <constraint firstItem="www-pD-wX4" firstAttribute="leading" secondItem="7YW-DL-yX5" secondAttribute="leading" constant="41" id="fdE-59-cSU"/>
                             <constraint firstItem="WT6-Sw-m97" firstAttribute="leading" secondItem="7YW-DL-yX5" secondAttribute="leading" constant="29" id="hk6-2b-7cr"/>
+                            <constraint firstItem="7YW-DL-yX5" firstAttribute="bottom" secondItem="www-pD-wX4" secondAttribute="bottom" constant="50" id="kTp-U2-qtH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -940,7 +963,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BY6-Zd-Y0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5932" y="1491"/>
+            <point key="canvasLocation" x="5930.5343511450383" y="1490.8450704225352"/>
         </scene>
     </scenes>
     <resources>

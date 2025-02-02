@@ -12,17 +12,24 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
     @IBOutlet var collectionView: UICollectionView!
     
     
+    var selectedInterests: Set<Int> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.allowsMultipleSelection = true
+
         
 //        collectionView.setCollectionViewLayout(generateLayout(), animated: true)
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func endOnboarding(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         NewDataModel.categories.count
@@ -37,13 +44,14 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
         }
         return cell
     }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        if let cell = cell as? IntrestsssCollectionViewCell {
-            cell.layer.backgroundColor = UIColor.systemPurple.cgColor
-        }
+        selectedInterests.insert(indexPath.item)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        selectedInterests.remove(indexPath.item)
+    }
 
 //    func generateLayout() -> UICollectionViewLayout {
 //            let layout = UICollectionViewFlowLayout()
@@ -57,8 +65,8 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Calculate dynamic width based on text
         let text = NewDataModel.categories[indexPath.row].name
-        let approximateWidth = text.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width + 40
-        return CGSize(width: approximateWidth, height: 50)
+        let approximateWidth = text.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width + 10
+        return CGSize(width: approximateWidth, height: 20)
     }
     /*
      
