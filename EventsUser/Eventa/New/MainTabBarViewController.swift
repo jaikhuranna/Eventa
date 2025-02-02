@@ -9,7 +9,7 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
-    var onbarded = false;
+    var onbarded = true;
     
     override func viewDidLoad() {
         super.viewDidLoad()

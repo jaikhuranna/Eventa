@@ -19,8 +19,6 @@ class getToKnowYouViewController: UIViewController {
     
     @IBAction func editedFeild(_ sender: Any) {
         getTaglineViewController.NameforLabel = NameFeild.text ?? "fd";
-        print(NameFeild.text ?? "")
-        
     }
 
         /*

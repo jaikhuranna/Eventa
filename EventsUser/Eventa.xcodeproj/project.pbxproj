@@ -12,11 +12,19 @@
 		3D43E4202D0EB90A00E7D74F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D43E41F2D0EB90A00E7D74F /* FirebaseFirestore */; };
 		3D49DB632D4FFFC00058DAB6 /* getTaglineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB622D4FFFC00058DAB6 /* getTaglineViewController.swift */; };
 		3D49DB692D4FFFD60058DAB6 /* getToKnowYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB682D4FFFD60058DAB6 /* getToKnowYouViewController.swift */; };
+		3D49DB6C2D5007E40058DAB6 /* NewExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB6B2D5007E40058DAB6 /* NewExploreViewController.swift */; };
+		3D49DB722D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB712D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift */; };
+		3D49DB742D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */; };
+		3D49DB782D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D49DB622D4FFFC00058DAB6 /* getTaglineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = getTaglineViewController.swift; path = "Eventa/New/New Onboarding/getTaglineViewController.swift"; sourceTree = "<group>"; };
 		3D49DB682D4FFFD60058DAB6 /* getToKnowYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = getToKnowYouViewController.swift; path = "Eventa/New/New Onboarding/getToKnowYouViewController.swift"; sourceTree = "<group>"; };
+		3D49DB6B2D5007E40058DAB6 /* NewExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewExploreViewController.swift; path = "Eventa/New/New Explore/NewExploreViewController.swift"; sourceTree = "<group>"; };
+		3D49DB712D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsWithYourFriendsCollectionViewCell.swift; path = "Eventa/New/New Explore/EventsWithYourFriendsCollectionViewCell.swift"; sourceTree = "<group>"; };
+		3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReccomendedEventsCollectionViewCell.swift; path = "Eventa/New/New Explore/ReccomendedEventsCollectionViewCell.swift"; sourceTree = "<group>"; };
+		3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpcomingEventsCollectionViewCell.swift; path = "Eventa/New/New Explore/UpcomingEventsCollectionViewCell.swift"; sourceTree = "<group>"; };
 		3DBED9642CB7A3A800778850 /* Eventa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +78,10 @@
 		3DBED95B2CB7A3A800778850 = {
 			isa = PBXGroup;
 			children = (
+				3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */,
+				3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */,
+				3D49DB712D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift */,
+				3D49DB6B2D5007E40058DAB6 /* NewExploreViewController.swift */,
 				3D49DB682D4FFFD60058DAB6 /* getToKnowYouViewController.swift */,
 				3D49DB622D4FFFC00058DAB6 /* getTaglineViewController.swift */,
 				3DBED9662CB7A3A800778850 /* Eventa */,
@@ -166,7 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D49DB6C2D5007E40058DAB6 /* NewExploreViewController.swift in Sources */,
+				3D49DB742D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift in Sources */,
+				3D49DB722D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift in Sources */,
 				3D49DB632D4FFFC00058DAB6 /* getTaglineViewController.swift in Sources */,
+				3D49DB782D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift in Sources */,
 				3D49DB692D4FFFD60058DAB6 /* getToKnowYouViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

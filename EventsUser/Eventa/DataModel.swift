@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 // MARK: Types of Events
 enum Section {
-    case upcoming, friendsAttending, forYou
+    case friendsAttending, ReccomendedEvents, upcoming
 }
 
 // MARK: All Tags
@@ -53,14 +53,14 @@ class DataModel {
     
     static var events = [Event]()
     
-    static let SectionTitles = ["Upcoming", "Friends Attending"]
-    
-    static let Sections: [Section] = [.upcoming, .friendsAttending]
+    static let Sections: [Section] = [.friendsAttending, .ReccomendedEvents, .upcoming]
     
     static var upcomingEvents: [Event] { DataModel.events }
 
     static var friendsAttending: [Event] { DataModel.events }
     
+    static var ReccomendedEvents: [Event] { DataModel.events }
+
     static let db = Firestore.firestore()
     
     static func saveEvent(event: Event) {

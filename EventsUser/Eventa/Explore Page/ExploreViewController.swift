@@ -48,7 +48,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
             ) as! ExploreHeaderCollectionReusableView
             
             // Configure the header
-            header.headerLabel?.text = DataModel.SectionTitles[indexPath.section]
+//            header.headerLabel?.text = DataModel.SectionTitles[indexPath.section]
             return header
         } else {
             fatalError("Unexpected supplementary view kind")
@@ -138,6 +138,5 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
                 return nil
             }
         }
-        return layout
-    }
+        return layout }
 }
