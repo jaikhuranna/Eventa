@@ -53,6 +53,8 @@ class DataModel {
     
     static var events = [Event]()
     
+    static let SectionHeaders: [String] = ["Events with your friends", "For you","Upcoming"]
+    
     static let Sections: [Section] = [.friendsAttending, .ReccomendedEvents, .upcoming]
     
     static var upcomingEvents: [Event] { DataModel.events }

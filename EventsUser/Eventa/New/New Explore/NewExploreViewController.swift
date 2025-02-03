@@ -15,6 +15,8 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         DataModel.fetchEvents { fetchedEvents in
                DispatchQueue.main.async {
                    DataModel.events = fetchedEvents
@@ -24,6 +26,27 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.setCollectionViewLayout( generateLayout(), animated: true)
+        
+        collectionView.register(
+            sectionHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "SectionHeader"
+        )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+        
+        let headerView = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: "SectionHeader",
+            for: indexPath
+        ) as! sectionHeaderCollectionReusableView
+        
+        headerView.configure(with: DataModel.SectionHeaders[indexPath.section]) // Use your section titles
+        return headerView
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -43,15 +66,14 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
 
-    //TODO: CHECK
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        print(String(indexPath.section) + " && " + String(indexPath.row))
-//        performSegue(withIdentifier: "EventDetail", sender: self)
-//        EventDetailViewController.indexvar = indexPath.row
-//        let VC = UIStoryboard(name: "EventDetails", bundle: module<Eventa>)
-//        present(EventDetailViewController, animated: true)
+//        performSegue(withIdentifier: "toEventDetails", sender: self)
+//        EventDetailsViewController.indexvar = indexPath.row
+//        let VC = UIStoryboard(name: "EventDetails", bundle: Bundle.main).instantiateViewController(withIdentifier: "EventDetailsViewController")
+//        present(VC, animated: true)
 //    }
-    
+//    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let eventsWithFriend = DataModel.friendsAttending[indexPath.row]
@@ -59,6 +81,12 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             if let cell = cell as? EventsWithYourFriendsCollectionViewCell
             {
                 cell.eventNameLabel.text = eventsWithFriend.title
+                cell.dateLabel.text = eventsWithFriend.date.formatted().substring(to: eventsWithFriend.date.formatted().index(eventsWithFriend.date.formatted().startIndex, offsetBy: 10))
+                cell.image.image = UIImage(named: eventsWithFriend.imageURL)
+                cell.image.layer.cornerRadius = 10
+                cell.joinButton.setTitle("Join", for: .normal)
+                cell.locationLabel.text = "Chennai"
+                cell.timeLabel.text = eventsWithFriend.date.formatted().substring(from: eventsWithFriend.date.formatted().index(eventsWithFriend.date.formatted().startIndex, offsetBy: 11))
             }
             return cell
         }
@@ -69,6 +97,11 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             if let cell = cell as? ReccomendedEventsCollectionViewCell
             {
                 cell.eventNameLabel.text = reccomendedEvent.title
+                cell.button.setTitle("Join", for: .normal)
+                cell.iamge.layer.cornerRadius = 10
+                cell.iamge.image = UIImage(named: reccomendedEvent.imageURL)
+                cell.dateNTime.text = reccomendedEvent.date.formatted()
+                cell.descriptionLabel.text = reccomendedEvent.description
             }
             return cell
         }
@@ -79,6 +112,11 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             if let cell = cell as? UpcomingEventsCollectionViewCell
             {
                 cell.eventNameLabel.text = UpcomingEvent.title
+                cell.button.setTitle("Join", for: .normal)
+                cell.iamge.layer.cornerRadius = 10
+                cell.iamge.image = UIImage(named: UpcomingEvent.imageURL)
+                cell.dateNTime.text = UpcomingEvent.date.formatted()
+                cell.descriptionLabel.text = UpcomingEvent.description
             }
             return cell
         }
@@ -128,20 +166,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
                 section.interGroupSpacing = 10
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
                 return section
-            case .friendsAttending:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.87), heightDimension: .absolute(271))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count:1)
-                let section = NSCollectionLayoutSection(group: group)
-                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-                section.boundarySupplementaryItems = [header]
-                section.orthogonalScrollingBehavior = .groupPagingCentered
-                section.interGroupSpacing = 10
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
-                return section
-            default:
-                return nil
             }
         }
         return layout }

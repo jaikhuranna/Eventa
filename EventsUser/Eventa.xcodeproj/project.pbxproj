@@ -16,6 +16,7 @@
 		3D49DB722D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB712D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift */; };
 		3D49DB742D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */; };
 		3D49DB782D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */; };
+		3DD844542D509507006C5B1B /* sectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD844532D509507006C5B1B /* sectionHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReccomendedEventsCollectionViewCell.swift; path = "Eventa/New/New Explore/ReccomendedEventsCollectionViewCell.swift"; sourceTree = "<group>"; };
 		3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpcomingEventsCollectionViewCell.swift; path = "Eventa/New/New Explore/UpcomingEventsCollectionViewCell.swift"; sourceTree = "<group>"; };
 		3DBED9642CB7A3A800778850 /* Eventa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD844532D509507006C5B1B /* sectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sectionHeaderCollectionReusableView.swift; path = "Eventa/New/New Explore/sectionHeaderCollectionReusableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -78,6 +80,7 @@
 		3DBED95B2CB7A3A800778850 = {
 			isa = PBXGroup;
 			children = (
+				3DD844532D509507006C5B1B /* sectionHeaderCollectionReusableView.swift */,
 				3D49DB772D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift */,
 				3D49DB732D50099D0058DAB6 /* ReccomendedEventsCollectionViewCell.swift */,
 				3D49DB712D50097B0058DAB6 /* EventsWithYourFriendsCollectionViewCell.swift */,
@@ -184,6 +187,7 @@
 				3D49DB632D4FFFC00058DAB6 /* getTaglineViewController.swift in Sources */,
 				3D49DB782D5009B90058DAB6 /* UpcomingEventsCollectionViewCell.swift in Sources */,
 				3D49DB692D4FFFD60058DAB6 /* getToKnowYouViewController.swift in Sources */,
+				3DD844542D509507006C5B1B /* sectionHeaderCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

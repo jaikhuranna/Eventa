@@ -16,19 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eventa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUd-52-VPg">
-                                <rect key="frame" x="119.66666666666669" y="399" width="154" height="54"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oOQ-dp-1uX">
+                                <rect key="frame" x="76.666666666666686" y="276" width="240" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vsy-ah-Wai">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="2tP-3T-qlf"/>
+                                            <constraint firstAttribute="height" constant="240" id="yaQ-UG-bUN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eventa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ds3-Vz-gKp">
+                                        <rect key="frame" x="0.0" y="240" width="240" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="q9Q-ya-Evf"/>
+                                    <constraint firstAttribute="height" constant="300" id="uWO-Rw-dnm"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="NUd-52-VPg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UbM-z5-aoC"/>
-                            <constraint firstItem="NUd-52-VPg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kug-e9-VNv"/>
+                            <constraint firstItem="oOQ-dp-1uX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VHT-oF-zo3"/>
+                            <constraint firstItem="oOQ-dp-1uX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="goh-yk-MWI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

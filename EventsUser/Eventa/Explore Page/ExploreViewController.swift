@@ -65,13 +65,13 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(String(indexPath.section) + " && " + String(indexPath.row))
-        performSegue(withIdentifier: "EventDetail", sender: self)
-        EventDetailViewController.indexvar = indexPath.row
-//        let VC = UIStoryboard(name: "EventDetails", bundle: module<Eventa>)
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(String(indexPath.section) + " && " + String(indexPath.row))
+//        performSegue(withIdentifier: "EventDetail", sender: self)
+//        EventDetailViewController.indexvar = indexPath.row
+////        let VC = UIStoryboard(name: "EventDetails", bundle: module<Eventa>)
 //        present(EventDetailViewController, animated: true)
-    }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (indexPath.section == 0){
