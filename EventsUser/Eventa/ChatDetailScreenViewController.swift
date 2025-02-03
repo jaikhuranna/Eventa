@@ -87,9 +87,9 @@ class ChatDetailScreenViewController: UIViewController, UICollectionViewDataSour
         
         nameRatedOutlet.text = "Similar interests between you and \(name!)"
         
-        question1.text = DataModel.events[0].icebreakerQuestions[0]
-        question2.text = DataModel.events[0].icebreakerQuestions[1]
-        question3.text = DataModel.events[0].icebreakerQuestions[2]
+//        question1.text = DataModel.events[0].
+//        question2.text = DataModel.events[0].icebreakerQuestions[1]
+//        question3.text = DataModel.events[0].icebreakerQuestions[2]
         
         collectionView.dataSource = self
         collectionView.delegate = self

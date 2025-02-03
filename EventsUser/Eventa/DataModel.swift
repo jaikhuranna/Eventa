@@ -18,7 +18,7 @@ enum IntrestTags: String, CaseIterable {
     case Games, Movies, Music, Sports, Travel
 }
 
-public struct Event {
+public struct OldEvent {
     var eventID = UUID()
     var title: String
     var description: String
@@ -65,52 +65,52 @@ class DataModel {
 
     static let db = Firestore.firestore()
     
-    static func saveEvent(event: Event) {
-         let eventRef = db.collection("events").document(event.eventID.uuidString)
-         eventRef.setData([
-             "title": event.title,
-             "description": event.description,
-             "date": event.date,
-             "tagline": event.tagline,
-             "image": event.imageURL,
-             "cost": event.cost,
-             "icebreakerQuestions": event.icebreakerQuestions
-         ]) { error in
-             if let error = error {
-                 print("Error saving event: \(error)")
-             } else {
-                 print("Event saved successfully")
-             }
-         }
-     }
+//    static func saveEvent(event: Event) {
+//         let eventRef = db.collection("events").document(event.eventID.uuidString)
+//         eventRef.setData([
+//             "title": event.title,
+//             "description": event.description,
+//             "date": event.date,
+//             "tagline": event.tagline,
+//             "image": event.imageURL,
+//             "cost": event.cost,
+//             "icebreakerQuestions": event.icebreakerQuestions
+//         ]) { error in
+//             if let error = error {
+//                 print("Error saving event: \(error)")
+//             } else {
+//                 print("Event saved successfully")
+//             }
+//         }
+//     }
     
-    static func fetchEvents(completion: @escaping ([Event]) -> Void) {
-        db.collection("events").getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Error fetching events: \(error)")
-                completion([])
-                return
-            }
-            
-            events = [Event]()
-            for document in querySnapshot!.documents {
-                let data = document.data()
-                let event = Event(
-                    eventID: UUID(uuidString: document.documentID) ?? UUID(),
-                    title: data["title"] as? String ?? "",
-                    description: data["description"] as? String ?? "",
-                    date: (data["date"] as? Timestamp)?.dateValue() ?? Date(),
-                    time: "", // Time can be calculated if needed
-                    tagline: data["tagline"] as? String ?? "",
-                    imageURL: data["image"] as? String ?? "",
-                    cost: data["cost"] as? Int ?? 0,
-                    icebreakerQuestions: data["icebreakerQuestions"] as? [String] ?? []
-                )
-                events.append(event)
-            }
-            completion(events)
-        }
-    }
+//    static func fetchEvents(completion: @escaping ([Event]) -> Void) {
+//        db.collection("events").getDocuments { (querySnapshot, error) in
+//            if let error = error {
+//                print("Error fetching events: \(error)")
+//                completion([])
+//                return
+//            }
+//            
+//            events = [Event]()
+//            for document in querySnapshot!.documents {
+//                let data = document.data()
+//                let event = Event(
+//                    eventID: UUID(uuidString: document.documentID) ?? UUID(),
+//                    title: data["title"] as? String ?? "",
+//                    description: data["description"] as? String ?? "",
+//                    date: (data["date"] as? Timestamp)?.dateValue() ?? Date(),
+//                    time: "", // Time can be calculated if needed
+//                    tagline: data["tagline"] as? String ?? "",
+//                    imageURL: data["image"] as? String ?? "",
+//                    cost: data["cost"] as? Int ?? 0,
+//                    icebreakerQuestions: data["icebreakerQuestions"] as? [String] ?? []
+//                )
+//                events.append(event)
+//            }
+//            completion(events)
+//        }
+//    }
     
     
     public struct Chat {
