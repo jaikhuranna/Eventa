@@ -22,4 +22,16 @@ class upcomingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var CostLabelUnderLabel: UILabel!
     
+    func configure(with event: Event) {
+            eventDescription.text = event.description
+            eventName.text = event.name
+            if let firstImage = event.images.first {
+                eventImageView.image = UIImage(named: firstImage)
+            }
+            eventImageView.layer.cornerRadius = 16
+            CostLabelUnderLabel.text = "Cost TBD"
+            dateAndTimeOfEvent.text = event.formattedDateTime
+        }
+    
+    
 }

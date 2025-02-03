@@ -22,7 +22,7 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        image.image = UIImage(named: DataModel.events[EventDetailViewController.indexvar ?? 0].imageURL) ?? UIImage()
+//        image.image = UIImage(named: DataModel.events[EventDetailViewController.indexvar ?? 0].imageURL) ?? UIImage()
         image.layer.cornerRadius = 16;
         
 //        DateandTime.text = DataModel.events[EventDetailViewController.indexvar ?? 0].date.description
