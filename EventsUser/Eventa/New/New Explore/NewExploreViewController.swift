@@ -15,8 +15,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         DataModel.fetchEvents { fetchedEvents in
                DispatchQueue.main.async {
                    DataModel.events = fetchedEvents
@@ -66,14 +64,13 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
 
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print(String(indexPath.section) + " && " + String(indexPath.row))
-//        performSegue(withIdentifier: "toEventDetails", sender: self)
-//        EventDetailsViewController.indexvar = indexPath.row
-//        let VC = UIStoryboard(name: "EventDetails", bundle: Bundle.main).instantiateViewController(withIdentifier: "EventDetailsViewController")
-//        present(VC, animated: true)
-//    }
-//    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(String(indexPath.section) + " && " + String(indexPath.row))
+        EventDetailsViewController.rowindex = indexPath.row
+        EventDetailsViewController.sectionindex = indexPath.section
+        performSegue(withIdentifier: "toEventDetails", sender: self)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let eventsWithFriend = DataModel.friendsAttending[indexPath.row]
