@@ -13,10 +13,7 @@ enum Section {
     case friendsAttending, ReccomendedEvents, upcoming
 }
 
-// MARK: All Tags
-enum IntrestTags: String, CaseIterable {
-    case Games, Movies, Music, Sports, Travel
-}
+
 
 public struct Event {
     var eventID = UUID()
@@ -50,8 +47,17 @@ func createDate(from string: String) -> Date? {
 
 class DataModel {
     
-    
     static var events = [Event]()
+
+    static let categories: [(name: String, emoji: String)] = [
+    ("Digital Art", "💻"), ("Community", "🙌"), ("Music & Entertainment", "🎤"), ("Rock", "🎸"),
+    ("Health", "💉"), ("Food & drink", "🍟"), ("Family & Education", "👨‍👩‍👧‍👦"),
+    ("Sport", "⚽️"), ("Fashion", "👠"), ("Film & Media", "🎞️"),
+    ("Home & Lifestyle", "🏡"), ("Design", "🎨"), ("Gaming", "🎮"),
+    ("Science & Tech", "🔬"), ("School & Education", "📚"),
+    ("Holiday", "⛱️"), ("Travel", "✈️")
+]
+
     
     static let SectionHeaders: [String] = ["Events with your friends", "For you","Upcoming"]
     

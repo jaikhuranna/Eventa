@@ -32,12 +32,12 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        NewDataModel.categories.count
+        DataModel.categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        let category = NewDataModel.categories[indexPath.item]
+        let category = DataModel.categories[indexPath.item]
         if let cell = cell as? IntrestsssCollectionViewCell {
             cell.emojiLabel.text = category.emoji
             cell.intrestLabel.text = category.name
@@ -64,7 +64,7 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Calculate dynamic width based on text
-        let text = NewDataModel.categories[indexPath.row].name
+        let text = DataModel.categories[indexPath.row].name
         let approximateWidth = text.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width + 10
         return CGSize(width: approximateWidth, height: 20)
     }

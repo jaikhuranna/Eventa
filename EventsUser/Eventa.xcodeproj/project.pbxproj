@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		173EE9812CEBD2530087678B /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 173EE9802CEBD2530087678B /* MessageKit */; };
+		3D17EAD22D539CB600C2FB6F /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17EAD12D539CB600C2FB6F /* NewProfileViewController.swift */; };
 		3D3435372D0E00350006E0C3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3D3435362D0E00350006E0C3 /* FirebaseAnalytics */; };
 		3D43E4202D0EB90A00E7D74F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D43E41F2D0EB90A00E7D74F /* FirebaseFirestore */; };
+		3D76825F2D53B2D900F3C475 /* ProfileIntrestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76825E2D53B2D900F3C475 /* ProfileIntrestsCollectionViewCell.swift */; };
 		3D8E81CC2D53334100091DB5 /* InEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8E81CB2D53334100091DB5 /* InEvent.storyboard */; };
 		3DD7FBF42D5340380054AA19 /* InEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7FBF32D5340380054AA19 /* InEventViewController.swift */; };
 		3DE4CF532D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4CF522D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D17EAD12D539CB600C2FB6F /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewProfileViewController.swift; path = "Eventa/New/New Profile/NewProfileViewController.swift"; sourceTree = "<group>"; };
+		3D76825E2D53B2D900F3C475 /* ProfileIntrestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileIntrestsCollectionViewCell.swift; path = "Eventa/New/New Profile/ProfileIntrestsCollectionViewCell.swift"; sourceTree = "<group>"; };
 		3D8E81CB2D53334100091DB5 /* InEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InEvent.storyboard; path = Eventa/New/Inevent/InEvent.storyboard; sourceTree = "<group>"; };
 		3DBED9642CB7A3A800778850 /* Eventa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD7FBF32D5340380054AA19 /* InEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InEventViewController.swift; path = Eventa/New/Inevent/InEventViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		3DBED95B2CB7A3A800778850 = {
 			isa = PBXGroup;
 			children = (
+				3D76825E2D53B2D900F3C475 /* ProfileIntrestsCollectionViewCell.swift */,
+				3D17EAD12D539CB600C2FB6F /* NewProfileViewController.swift */,
 				3D8E81CB2D53334100091DB5 /* InEvent.storyboard */,
 				3DE4CF522D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift */,
 				3DE4CF592D53666900A8129C /* CurveTextView.swift */,
@@ -175,7 +181,9 @@
 			files = (
 				3DE4CF5A2D53666900A8129C /* CurveTextView.swift in Sources */,
 				3DE4CF532D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift in Sources */,
+				3D17EAD22D539CB600C2FB6F /* NewProfileViewController.swift in Sources */,
 				3DD7FBF42D5340380054AA19 /* InEventViewController.swift in Sources */,
+				3D76825F2D53B2D900F3C475 /* ProfileIntrestsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
