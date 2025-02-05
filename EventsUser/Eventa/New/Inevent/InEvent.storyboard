@@ -424,7 +424,7 @@
                             <constraint firstItem="hJp-uT-77N" firstAttribute="leading" secondItem="CDd-Ew-Oyg" secondAttribute="leading" id="WZh-R8-sKQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gallery" id="Kse-1f-oRG">
+                    <navigationItem key="navigationItem" title="Gallery" largeTitleDisplayMode="always" id="Kse-1f-oRG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JZb-Zn-5lX">
                             <connections>
                                 <action selector="addImageTapped:" destination="D5b-8n-Mle" id="pEm-mf-oQU"/>
@@ -520,7 +520,7 @@
         <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="102"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
