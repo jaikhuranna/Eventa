@@ -511,10 +511,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="y49-XA-vW5" kind="presentation" identifier="onboarding" id="6Gx-qI-Gqw"/>
-                        <segue destination="N1p-6N-q1q" kind="relationship" relationship="viewControllers" id="sDu-Bo-5D7"/>
-                        <segue destination="UKf-ZE-ffH" kind="relationship" relationship="viewControllers" id="3Oa-Z8-qC1"/>
-                        <segue destination="5vF-ta-P7U" kind="relationship" relationship="viewControllers" id="gPk-lC-2km"/>
-                        <segue destination="UHL-2r-QeC" kind="relationship" relationship="viewControllers" id="Omj-G7-MPd"/>
+                        <segue destination="N1p-6N-q1q" kind="relationship" relationship="viewControllers" id="n9q-e0-ugG"/>
+                        <segue destination="UKf-ZE-ffH" kind="relationship" relationship="viewControllers" id="rvU-JM-pyc"/>
+                        <segue destination="7mJ-MM-2Lz" kind="relationship" relationship="viewControllers" id="ybb-cc-XSD"/>
+                        <segue destination="5vF-ta-P7U" kind="relationship" relationship="viewControllers" id="wdp-MC-NQl"/>
+                        <segue destination="UHL-2r-QeC" kind="relationship" relationship="viewControllers" id="Z3S-Re-qTi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRf-11-B5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -539,7 +540,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnM-um-x46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="614"/>
+            <point key="canvasLocation" x="3692" y="594"/>
         </scene>
         <!--New_Profile-->
         <scene sceneID="gHX-EX-tLO">
@@ -549,7 +550,18 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-bZ-hlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3653" y="797"/>
+            <point key="canvasLocation" x="3688" y="815"/>
+        </scene>
+        <!--InEvent-->
+        <scene sceneID="Apz-Tk-RDI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InEvent" id="7mJ-MM-2Lz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="BA9-72-cMF"/>
+                    <navigationItem key="navigationItem" id="kZK-x1-zHh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rp-PW-tbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3667" y="760"/>
         </scene>
         <!--New_Search-->
         <scene sceneID="Cpf-2Z-xlP">
@@ -559,7 +571,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6z-74-VNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3599" y="965"/>
+            <point key="canvasLocation" x="3690" y="892"/>
         </scene>
         <!--Onboarding-->
         <scene sceneID="7En-Gj-m3F">
@@ -936,6 +948,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="J8F-vE-Vpv"/>
                                 </constraints>
+                                <color key="tintColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Explore!"/>
                                 <connections>
