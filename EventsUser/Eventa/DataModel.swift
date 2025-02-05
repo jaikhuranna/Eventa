@@ -53,6 +53,40 @@ func createDate(from string: String) -> Date? {
 
 class DataModel {
     
+    
+    static var lastResultEvents = [Event]() // Separate array for search results
+
+    static func searchEvents(queryText: String, completion: @escaping () -> Void) {
+        db.collection("events")
+            .whereField("title", isGreaterThanOrEqualTo: queryText)
+            .whereField("title", isLessThanOrEqualTo: queryText + "\u{f8ff}")
+            .getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error searching events: \(error)")
+                    lastResultEvents = [] // Clear results on error
+                    completion()
+                    return
+                }
+                
+                lastResultEvents = querySnapshot?.documents.compactMap { document in
+                    let data = document.data()
+                    return Event(
+                        eventID: UUID(uuidString: document.documentID) ?? UUID(),
+                        title: data["title"] as? String ?? "",
+                        description: data["description"] as? String ?? "",
+                        date: (data["date"] as? Timestamp)?.dateValue() ?? Date(),
+                        time: "",
+                        tagline: data["tagline"] as? String ?? "",
+                        imageURL: data["image"] as? String ?? "",
+                        cost: data["cost"] as? Int ?? 0,
+                        icebreakerQuestions: data["icebreakerQuestions"] as? [String] ?? []
+                    )
+                } ?? []
+                
+                completion() // Notify when search is complete
+            }
+    }
+    
     static var events = [Event]()
 
     static let categories: [(name: String, emoji: String)] = [
