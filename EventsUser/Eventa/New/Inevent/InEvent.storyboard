@@ -362,24 +362,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-a8-8xx">
-                                <rect key="frame" x="40" y="702" width="313" height="47"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-Ft-DfQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="47"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Camera"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqX-fS-P9e">
-                                        <rect key="frame" x="170.66666666666663" y="0.0" width="142.33333333333337" height="47"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Gallery"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="Jmx-a0-32H"/>
-                                </constraints>
-                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJp-uT-77N">
                                 <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -437,12 +419,9 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="hJp-uT-77N" secondAttribute="bottom" id="1ZA-RB-U7x"/>
-                            <constraint firstItem="CDd-Ew-Oyg" firstAttribute="trailing" secondItem="uhp-a8-8xx" secondAttribute="trailing" constant="40" id="Ayo-Zk-zRf"/>
-                            <constraint firstItem="CDd-Ew-Oyg" firstAttribute="bottom" secondItem="uhp-a8-8xx" secondAttribute="bottom" constant="20" id="Hsp-B4-joc"/>
                             <constraint firstItem="hJp-uT-77N" firstAttribute="top" secondItem="CDd-Ew-Oyg" secondAttribute="top" id="KTh-qi-59e"/>
                             <constraint firstItem="CDd-Ew-Oyg" firstAttribute="trailing" secondItem="hJp-uT-77N" secondAttribute="trailing" id="TaZ-ri-8Jc"/>
                             <constraint firstItem="hJp-uT-77N" firstAttribute="leading" secondItem="CDd-Ew-Oyg" secondAttribute="leading" id="WZh-R8-sKQ"/>
-                            <constraint firstItem="uhp-a8-8xx" firstAttribute="leading" secondItem="CDd-Ew-Oyg" secondAttribute="leading" constant="40" id="kr6-4D-fRF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="Kse-1f-oRG">
@@ -453,7 +432,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="hJp-uT-77N" id="zsy-sr-02l"/>
+                        <outlet property="collectionView" destination="hJp-uT-77N" id="GB0-yy-Yo7"/>
                         <segue destination="UEQ-20-OCX" kind="show" identifier="toPhotoDetails" id="9Fz-ml-mrQ"/>
                     </connections>
                 </viewController>
