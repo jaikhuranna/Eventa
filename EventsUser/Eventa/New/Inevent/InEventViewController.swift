@@ -20,6 +20,7 @@ class InEventViewController: UIViewController {
         if let tabBarController = tabBarController as? MainTabBarViewController {
             tabBarController.selectedIndex = 0
             tabBarController.hideTab(at: 2)
+            tabBarController.inEvent = false
         }
     }
     

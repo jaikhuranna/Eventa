@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+
 class EventDetailsViewController: UIViewController {
 
     static var rowindex:Int?
@@ -57,6 +58,7 @@ class EventDetailsViewController: UIViewController {
 //            tabBarController.hideTab(at: 1) // Hides second tab
             tabBarController.restoreTabs()  // Restores original setup
             tabBarController.selectedIndex = 2
+            tabBarController.inEvent = true;
         }
     }
     /*

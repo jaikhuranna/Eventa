@@ -10,13 +10,17 @@ import UIKit
 class MainTabBarViewController: UITabBarController {
 
     var onbarded = true;
-    var inEvent = true;
+    var inEvent = false;
+    
     private var initialViewControllers: [UIViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initialViewControllers = self.viewControllers ?? []
-        hideTab(at: 2)
+        if !inEvent
+        {
+            hideTab(at: 2)
+        }
     }
     
     
