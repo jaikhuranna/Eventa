@@ -357,7 +357,7 @@
         <!--Gallery-->
         <scene sceneID="jLX-ep-7gk">
             <objects>
-                <viewController id="D5b-8n-Mle" sceneMemberID="viewController">
+                <viewController id="D5b-8n-Mle" customClass="GalleryViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zL-Ld-RCh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +390,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iGN-ah-rLI">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="iGN-ah-rLI" customClass="GalleryCell" customModule="Eventa" customModuleProvider="target">
                                         <rect key="frame" x="99" y="0.0" width="195" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="p9O-sL-dj3">
@@ -426,6 +426,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="195" height="195"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="mAL-kS-Ove" id="HGK-Q2-EeN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -443,9 +446,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="Kse-1f-oRG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JZb-Zn-5lX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JZb-Zn-5lX">
+                            <connections>
+                                <action selector="addImageTapped:" destination="D5b-8n-Mle" id="pEm-mf-oQU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="hJp-uT-77N" id="zsy-sr-02l"/>
                         <segue destination="UEQ-20-OCX" kind="show" identifier="toPhotoDetails" id="9Fz-ml-mrQ"/>
                     </connections>
                 </viewController>
@@ -456,7 +464,7 @@
         <!--Photo Details-->
         <scene sceneID="111-7F-E9e">
             <objects>
-                <viewController title="Photo Details" id="UEQ-20-OCX" sceneMemberID="viewController">
+                <viewController title="Photo Details" id="UEQ-20-OCX" customClass="PhotoDetailsViewController" customModule="Eventa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5hI-Z9-Tur">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,19 +476,14 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-Jx-WLo">
-                                <rect key="frame" x="20" y="733" width="191" height="34.333333333333371"/>
+                                <rect key="frame" x="20" y="733" width="81.666666666666671" height="21.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-On-jXM">
-                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uby-Nq-Ndf">
-                                        <rect key="frame" x="81.666666666666686" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="User Name"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -495,6 +498,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Details" largeTitleDisplayMode="never" id="Bh2-qp-aJO"/>
+                    <connections>
+                        <outlet property="imageView" destination="jvC-Em-AxA" id="TrD-Qj-7oM"/>
+                        <outlet property="uploaderLabel" destination="W7a-On-jXM" id="01T-gO-1kA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eg-VD-VRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -534,7 +541,7 @@
         <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="102"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

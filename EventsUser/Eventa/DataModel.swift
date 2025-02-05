@@ -15,6 +15,12 @@ enum Section {
 
 
 
+// stuct for testing
+public struct ImageModel {
+        let imageUrl: String
+    let uploaderName: String
+}
+
 public struct Event {
     var eventID = UUID()
     var title: String
