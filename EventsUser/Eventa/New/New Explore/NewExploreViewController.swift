@@ -32,6 +32,14 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
         )
     }
     
+    @IBAction func joinEventDirectly(_ sender: Any) {
+        if let tabBarController = self.tabBarController as? MainTabBarViewController {
+//            tabBarController.hideTab(at: 1) // Hides second tab
+            tabBarController.restoreTabs()  // Restores original setup
+            tabBarController.selectedIndex = 2
+            tabBarController.inEvent = true;
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else {
             return UICollectionReusableView()

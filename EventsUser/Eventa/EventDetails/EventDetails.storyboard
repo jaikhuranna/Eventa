@@ -4,16 +4,5 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
     </dependencies>
-    <scenes>
-        <!--ScreenAfterJoining-->
-        <scene sceneID="CV0-kG-Aap">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ScreenAfterJoining" id="eUu-gs-mX8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="N4p-aN-c2E"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W2R-d4-EPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1201" y="-109"/>
-        </scene>
-    </scenes>
+    <scenes/>
 </document>

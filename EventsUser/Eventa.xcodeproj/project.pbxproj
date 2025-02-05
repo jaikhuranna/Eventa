@@ -12,12 +12,16 @@
 		3D43E4202D0EB90A00E7D74F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D43E41F2D0EB90A00E7D74F /* FirebaseFirestore */; };
 		3D8E81CC2D53334100091DB5 /* InEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8E81CB2D53334100091DB5 /* InEvent.storyboard */; };
 		3DD7FBF42D5340380054AA19 /* InEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD7FBF32D5340380054AA19 /* InEventViewController.swift */; };
+		3DE4CF532D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4CF522D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift */; };
+		3DE4CF5A2D53666900A8129C /* CurveTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4CF592D53666900A8129C /* CurveTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D8E81CB2D53334100091DB5 /* InEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InEvent.storyboard; path = Eventa/New/Inevent/InEvent.storyboard; sourceTree = "<group>"; };
 		3DBED9642CB7A3A800778850 /* Eventa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD7FBF32D5340380054AA19 /* InEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InEventViewController.swift; path = Eventa/New/Inevent/InEventViewController.swift; sourceTree = "<group>"; };
+		3DE4CF522D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeopleWithIntrestsCollectionViewCell.swift; path = Eventa/New/Inevent/PeopleWithIntrestsCollectionViewCell.swift; sourceTree = "<group>"; };
+		3DE4CF592D53666900A8129C /* CurveTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurveTextView.swift; path = Eventa/Classes/CurveTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				3D8E81CB2D53334100091DB5 /* InEvent.storyboard */,
+				3DE4CF522D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift */,
+				3DE4CF592D53666900A8129C /* CurveTextView.swift */,
 				3DD7FBF32D5340380054AA19 /* InEventViewController.swift */,
 				3DBED9662CB7A3A800778850 /* Eventa */,
 				3DBED9652CB7A3A800778850 /* Products */,
@@ -167,6 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE4CF5A2D53666900A8129C /* CurveTextView.swift in Sources */,
+				3DE4CF532D53610800A8129C /* PeopleWithIntrestsCollectionViewCell.swift in Sources */,
 				3DD7FBF42D5340380054AA19 /* InEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

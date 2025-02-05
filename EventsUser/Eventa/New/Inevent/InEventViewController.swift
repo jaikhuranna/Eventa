@@ -7,15 +7,24 @@
 
 import UIKit
 
-class InEventViewController: UIViewController {
-
+class InEventViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var titleEventName: UINavigationItem!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.setCollectionViewLayout(generateLoyout(), animated: true)
         titleEventName.title = "Event Name"
-        // Do any additional setup after loading the view.
     }
+    
     @IBAction func exitTabBarButton(_ sender: Any) {
         if let tabBarController = tabBarController as? MainTabBarViewController {
             tabBarController.selectedIndex = 0
@@ -24,14 +33,26 @@ class InEventViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        2
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleWithIntrestsCell", for: indexPath) as? PeopleWithIntrestsCollectionViewCell {
+            let curvedTextView = CurvedTextView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+            cell.baseViewContainer.addSubview(curvedTextView)
+            curvedTextView.center = cell.baseViewContainer.center
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    func generateLoyout() -> UICollectionViewFlowLayout {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layout.itemSize = CGSize(width: 200, height: 150)
+        layout.minimumInteritemSpacing = 20
+        return layout
+    }
+    
 }

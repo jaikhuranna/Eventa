@@ -5,6 +5,7 @@
 //  Created by Jai Khurana on 03/02/25.
 //
 
+import CallKit
 import UIKit
 import MapKit
 
@@ -59,6 +60,18 @@ class EventDetailsViewController: UIViewController {
             tabBarController.restoreTabs()  // Restores original setup
             tabBarController.selectedIndex = 2
             tabBarController.inEvent = true;
+        }
+    }
+    
+    
+    @IBAction func phoneCallOrganiser(_ sender: Any) {
+        if let phoneURL = URL(string: "tel://9354883188") {
+            if UIApplication.shared.canOpenURL(phoneURL) {
+                UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+            } else {
+                // Handle the error, maybe show an alert that calling is not supported
+                print("Cannot open the phone app")
+            }
         }
     }
     /*
