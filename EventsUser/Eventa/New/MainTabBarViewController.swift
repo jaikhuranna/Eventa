@@ -9,7 +9,7 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
-    var onbarded = true;
+    var onbarded = false;
     var inEvent = false;
     
     private var initialViewControllers: [UIViewController] = []

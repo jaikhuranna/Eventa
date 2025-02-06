@@ -16,6 +16,9 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     var images: [ImageModel] = [] // Array to store image data
     var eventID: String = "23156AAB-DB89-478C-804B-22DF94A0B4AF" // Pass this dynamically
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidLoad()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

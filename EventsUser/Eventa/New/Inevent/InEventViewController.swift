@@ -15,6 +15,10 @@ class InEventViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var titleEventName: UINavigationItem!
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -41,9 +45,6 @@ class InEventViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleWithIntrestsCell", for: indexPath) as? PeopleWithIntrestsCollectionViewCell {
-            let curvedTextView = CurvedTextView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-            cell.baseViewContainer.addSubview(curvedTextView)
-            curvedTextView.center = cell.baseViewContainer.center
             return cell
         }
         return UICollectionViewCell()

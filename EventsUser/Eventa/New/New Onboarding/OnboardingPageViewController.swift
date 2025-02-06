@@ -23,8 +23,9 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         let On2 = storyboard.instantiateViewController(withIdentifier: "On2")
         let On3 = storyboard.instantiateViewController(withIdentifier: "On3")
         let On4 = storyboard.instantiateViewController(withIdentifier: "On4")
+        let On5 = storyboard.instantiateViewController(withIdentifier: "On5")
 
-        pages = [On1, On2, On3, On4]
+        pages = [On1, On2, On3, On4, On5]
         if let firstPage = pages.first {
             setViewControllers([firstPage], direction: .forward, animated: true)
         }
@@ -34,6 +35,10 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         pageControl.currentPageIndicatorTintColor = .purple
     }
     
+    func navigateToPage(index: Int) {
+          guard index < pages.count else { return }
+          setViewControllers([pages[index]], direction: .forward, animated: true)
+      }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController), index > 0 else { return nil }

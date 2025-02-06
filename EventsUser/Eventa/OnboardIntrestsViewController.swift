@@ -26,11 +26,6 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func endOnboarding(_ sender: Any) {
-        dismiss(animated: true)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         DataModel.categories.count
     }
