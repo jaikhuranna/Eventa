@@ -15,10 +15,9 @@ class ProfileIntrestsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var IntrestLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        backroundViewContainer.layer.cornerRadius = 12
-        emojiOnlyContainerView.layer.borderWidth = 1
-        emojiOnlyContainerView.layer.cornerRadius = 12
+        backroundViewContainer.layer.cornerRadius = 8
+        emojiOnlyContainerView.layer.borderWidth = 0.5
+        emojiOnlyContainerView.layer.cornerRadius = 8
         emojiOnlyContainerView.layer.borderColor = UIColor.purple.cgColor
-        
     }
 }

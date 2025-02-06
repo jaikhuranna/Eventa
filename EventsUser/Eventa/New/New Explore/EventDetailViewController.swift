@@ -12,6 +12,8 @@ import MapKit
 
 class EventDetailsViewController: UIViewController {
 
+    static var eventToShow : Event?
+    
     static var rowindex:Int?
     static var sectionindex:Int?
 
@@ -37,7 +39,8 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet var userAttendingImage1: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let EventToShow = DataModel.allEvents[EventDetailsViewController.sectionindex!][EventDetailsViewController.rowindex!]
+        let EventToShow = EventDetailsViewController.eventToShow!;
+        
         Image.image = UIImage(named: EventToShow.imageURL)
         Image.layer.cornerRadius = 15;
         titleHolderView.layer.cornerRadius = 16;
@@ -56,6 +59,7 @@ class EventDetailsViewController: UIViewController {
     }
     @IBAction func joinEventButton(_ sender: Any) {
         if let tabBarController = self.tabBarController as? MainTabBarViewController {
+            InEventViewController.eventToShow = EventDetailsViewController.eventToShow!
 //            tabBarController.hideTab(at: 1) // Hides second tab
             tabBarController.restoreTabs()  // Restores original setup
             tabBarController.selectedIndex = 2

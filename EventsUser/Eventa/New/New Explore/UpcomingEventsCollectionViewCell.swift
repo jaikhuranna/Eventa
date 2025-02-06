@@ -13,5 +13,4 @@ class UpcomingEventsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var eventNameLabel: UILabel!
     @IBOutlet var dateNTime: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var button: UIButton!
 }

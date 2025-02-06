@@ -16,6 +16,7 @@ class SearchViewController: UIViewController , UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        DataModel.lastResultEvents = DataModel.events // Clear results if empty
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,9 +36,19 @@ class SearchViewController: UIViewController , UITableViewDelegate, UITableViewD
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let eventToSend : Event = DataModel.lastResultEvents[indexPath.row]
+        EventDetailsViewController.eventToShow = eventToSend
+        let storyboard = UIStoryboard(name: "New_Explore", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "EventDetailsViewController") as? EventDetailsViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            DataModel.lastResultEvents = [] // Clear results if empty
+            DataModel.lastResultEvents = DataModel.events // Clear results if empty
             tableView.reloadData()
             return
         }

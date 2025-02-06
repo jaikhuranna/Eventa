@@ -9,20 +9,22 @@ import UIKit
 
 class InEventViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    static var eventToShow: Event?
+    
+    @IBOutlet var imageVIEW: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var titleEventName: UINavigationItem!
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout(generateLoyout(), animated: true)
-        titleEventName.title = "Event Name"
+        
+        imageVIEW.image = UIImage(named: InEventViewController.eventToShow!
+            .imageURL)
+        imageVIEW.layer.cornerRadius = 20
+        titleEventName.title = InEventViewController.eventToShow?.title
     }
     
     @IBAction func exitTabBarButton(_ sender: Any) {

@@ -32,14 +32,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
         )
     }
     
-    @IBAction func joinEventDirectly(_ sender: Any) {
-        if let tabBarController = self.tabBarController as? MainTabBarViewController {
-//            tabBarController.hideTab(at: 1) // Hides second tab
-            tabBarController.restoreTabs()  // Restores original setup
-            tabBarController.selectedIndex = 2
-            tabBarController.inEvent = true;
-        }
-    }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else {
             return UICollectionReusableView()
@@ -74,8 +66,7 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(String(indexPath.section) + " && " + String(indexPath.row))
-        EventDetailsViewController.rowindex = indexPath.row
-        EventDetailsViewController.sectionindex = indexPath.section
+        EventDetailsViewController.eventToShow = DataModel.allEvents[indexPath.section][indexPath.row]
         performSegue(withIdentifier: "toEventDetails", sender: self)
     }
     
@@ -89,7 +80,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
                 cell.dateLabel.text = eventsWithFriend.date.formatted().substring(to: eventsWithFriend.date.formatted().index(eventsWithFriend.date.formatted().startIndex, offsetBy: 10))
                 cell.image.image = UIImage(named: eventsWithFriend.imageURL)
                 cell.image.layer.cornerRadius = 10
-                cell.joinButton.setTitle("Join", for: .normal)
                 cell.locationLabel.text = "Chennai"
                 cell.timeLabel.text = eventsWithFriend.date.formatted().substring(from: eventsWithFriend.date.formatted().index(eventsWithFriend.date.formatted().startIndex, offsetBy: 11))
             }
@@ -102,7 +92,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             if let cell = cell as? ReccomendedEventsCollectionViewCell
             {
                 cell.eventNameLabel.text = reccomendedEvent.title
-                cell.button.setTitle("Join", for: .normal)
                 cell.iamge.layer.cornerRadius = 10
                 cell.iamge.image = UIImage(named: reccomendedEvent.imageURL)
                 cell.dateNTime.text = reccomendedEvent.date.formatted()
@@ -117,7 +106,6 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             if let cell = cell as? UpcomingEventsCollectionViewCell
             {
                 cell.eventNameLabel.text = UpcomingEvent.title
-                cell.button.setTitle("Join", for: .normal)
                 cell.iamge.layer.cornerRadius = 10
                 cell.iamge.image = UIImage(named: UpcomingEvent.imageURL)
                 cell.dateNTime.text = UpcomingEvent.date.formatted()
@@ -150,7 +138,7 @@ class NewExploreViewController: UIViewController, UICollectionViewDataSource, UI
             case .friendsAttending:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.87), heightDimension: .absolute(271))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.87), heightDimension: .absolute(275))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count:1)
                 let section = NSCollectionLayoutSection(group: group)
                 let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)

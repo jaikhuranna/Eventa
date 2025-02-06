@@ -18,7 +18,7 @@ class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.layer.cornerRadius = 12
+        collectionView.layer.cornerRadius = 8
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
@@ -48,7 +48,7 @@ class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICo
             
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(120), heightDimension: .absolute(30))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(20))
             let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
             let section = NSCollectionLayoutSection(group: group)
             section.orthogonalScrollingBehavior = .continuous
