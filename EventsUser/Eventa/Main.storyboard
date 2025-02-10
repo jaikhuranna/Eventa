@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yYR-L9-bnO">
-                                <rect key="frame" x="31" y="601" width="331" height="112.66666666666663"/>
+                                <rect key="frame" x="31" y="601" width="331" height="78.333333333333371"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-hD-MxJ">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="21.666666666666668"/>
@@ -164,36 +164,11 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover events, see where your friends are going, and invite others to Join" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHe-Lg-jpE">
-                                        <rect key="frame" x="0.0" y="72" width="331" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="37.666666666666629" width="331" height="40.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wgh-Nr-jsv">
-                                <rect key="frame" x="40" y="733.66666666666663" width="313" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBS-Ma-JVP">
-                                        <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign In">
-                                            <color key="baseBackgroundColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="signInButton:" destination="UK8-Yq-xSV" eventType="touchUpInside" id="5BJ-jf-6mc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-Yh-0FE">
-                                        <rect key="frame" x="171.66666666666663" y="0.0" width="141.33333333333337" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign Up">
-                                            <color key="baseBackgroundColor" red="0.44705882349999998" green="0.18823529410000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="signUpButton:" destination="UK8-Yq-xSV" eventType="touchUpInside" id="pDO-aw-N9y"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -202,13 +177,9 @@
                         <constraints>
                             <constraint firstItem="yYR-L9-bnO" firstAttribute="top" secondItem="zne-w0-EXk" secondAttribute="bottom" constant="20" id="0MN-Zw-Wwy"/>
                             <constraint firstItem="W5U-XE-aby" firstAttribute="trailing" secondItem="yYR-L9-bnO" secondAttribute="trailing" constant="31" id="8GL-I8-FbC"/>
-                            <constraint firstItem="W5U-XE-aby" firstAttribute="trailing" secondItem="wgh-Nr-jsv" secondAttribute="trailing" constant="40" id="BBd-rk-YiG"/>
                             <constraint firstItem="zne-w0-EXk" firstAttribute="top" secondItem="W5U-XE-aby" secondAttribute="top" constant="479" id="GD6-PA-vRw"/>
                             <constraint firstItem="741-i8-62B" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" id="Suf-vS-rHt"/>
-                            <constraint firstItem="wgh-Nr-jsv" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" constant="40" id="XN7-8a-bkv"/>
                             <constraint firstItem="741-i8-62B" firstAttribute="top" secondItem="W5U-XE-aby" secondAttribute="top" constant="-60" id="YUV-4n-FQZ"/>
-                            <constraint firstItem="wgh-Nr-jsv" firstAttribute="top" secondItem="yYR-L9-bnO" secondAttribute="bottom" constant="20" id="eZd-gE-nfb"/>
-                            <constraint firstItem="W5U-XE-aby" firstAttribute="bottom" secondItem="wgh-Nr-jsv" secondAttribute="bottom" constant="50" id="hlG-QD-coC"/>
                             <constraint firstItem="yYR-L9-bnO" firstAttribute="centerX" secondItem="4Om-Rg-zRk" secondAttribute="centerX" id="hte-Vy-3Re"/>
                             <constraint firstItem="yYR-L9-bnO" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" constant="31" id="hy7-gd-kDo"/>
                             <constraint firstItem="zne-w0-EXk" firstAttribute="centerX" secondItem="4Om-Rg-zRk" secondAttribute="centerX" id="inB-N1-E84"/>

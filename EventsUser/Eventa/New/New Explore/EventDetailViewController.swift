@@ -5,14 +5,13 @@
 //  Created by Jai Khurana on 03/02/25.
 //
 
-import CallKit
 import UIKit
 import MapKit
 
 
 class EventDetailsViewController: UIViewController {
 
-    static var eventToShow : Event?
+    static var eventToShow :  Event?
     
     static var rowindex:Int?
     static var sectionindex:Int?
@@ -69,7 +68,7 @@ class EventDetailsViewController: UIViewController {
     
     
     @IBAction func phoneCallOrganiser(_ sender: Any) {
-        if let phoneURL = URL(string: "tel://9354883188") {
+        if let phoneURL = URL(string: "tel://9354883198"){
             if UIApplication.shared.canOpenURL(phoneURL) {
                 UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
             } else {

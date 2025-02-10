@@ -86,7 +86,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="312" height="16"/>
                                                                                     <subviews>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="M95-zv-g9W">
-                                                                                            <rect key="frame" x="0.0" y="0.33333333333333215" width="20" height="15.333333333333345"/>
+                                                                                            <rect key="frame" x="0.0" y="0.33333333333333215" width="20" height="15.333333333333346"/>
                                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="20" id="HDL-PO-Lo4"/>
@@ -712,7 +712,7 @@ project's music.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq5-x1-dgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="-95"/>
+            <point key="canvasLocation" x="1669" y="-95"/>
         </scene>
         <!--Explore-->
         <scene sceneID="SC0-KC-W5E">
