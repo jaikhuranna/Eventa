@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nXB-5h-mVI">
-                                <rect key="frame" x="16" y="566.33333333333337" width="361" height="202.66666666666663"/>
+                                <rect key="frame" x="0.0" y="566.33333333333337" width="393" height="202.66666666666663"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zWa-hy-OpJ">
                                     <size key="itemSize" width="141" height="97"/>
@@ -134,7 +134,21 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crp-wd-SwI">
                                                     <rect key="frame" x="0.0" y="0.0" width="141" height="97"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHc-bJ-gMr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="97"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="oHc-bJ-gMr" secondAttribute="bottom" id="0Um-QE-di4"/>
+                                                        <constraint firstItem="oHc-bJ-gMr" firstAttribute="top" secondItem="crp-wd-SwI" secondAttribute="top" id="1YN-R2-gQt"/>
+                                                        <constraint firstItem="oHc-bJ-gMr" firstAttribute="top" secondItem="crp-wd-SwI" secondAttribute="top" id="86L-mR-QMc"/>
+                                                        <constraint firstItem="oHc-bJ-gMr" firstAttribute="leading" secondItem="crp-wd-SwI" secondAttribute="leading" id="9bc-hp-xob"/>
+                                                        <constraint firstItem="oHc-bJ-gMr" firstAttribute="leading" secondItem="crp-wd-SwI" secondAttribute="leading" id="TB0-Mj-9Wx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oHc-bJ-gMr" secondAttribute="trailing" id="gqy-Wz-Jg5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oHc-bJ-gMr" secondAttribute="trailing" id="zvX-rV-gKO"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -148,6 +162,7 @@
                                         <size key="customSize" width="141" height="97"/>
                                         <connections>
                                             <outlet property="baseViewContainer" destination="crp-wd-SwI" id="rWB-cE-sDP"/>
+                                            <outlet property="imageView" destination="oHc-bJ-gMr" id="6vc-QE-6Xk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -169,10 +184,10 @@
                             <constraint firstItem="WWE-8o-Usl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="S9r-Hp-28I"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nXB-5h-mVI" secondAttribute="bottom" id="VV6-z2-9Yw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R0v-FC-Pvx" secondAttribute="trailing" constant="20" id="XSN-eD-epV"/>
-                            <constraint firstItem="nXB-5h-mVI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="hbr-Zu-o9z"/>
+                            <constraint firstItem="nXB-5h-mVI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hbr-Zu-o9z"/>
                             <constraint firstItem="R0v-FC-Pvx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kQu-4o-GhN"/>
                             <constraint firstItem="hJL-Ic-22h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ogA-XP-GuY"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nXB-5h-mVI" secondAttribute="trailing" constant="16" id="pAP-CK-A0q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nXB-5h-mVI" secondAttribute="trailing" id="pAP-CK-A0q"/>
                             <constraint firstItem="WWE-8o-Usl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qMz-go-X10"/>
                             <constraint firstItem="qPs-GI-gkh" firstAttribute="top" secondItem="R0v-FC-Pvx" secondAttribute="bottom" constant="25" id="vll-64-tcD"/>
                             <constraint firstItem="R0v-FC-Pvx" firstAttribute="top" secondItem="hJL-Ic-22h" secondAttribute="bottom" constant="25" id="wOx-o3-Pno"/>
@@ -208,7 +223,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8q0-qt-Bfr">
                                 <rect key="frame" x="16" y="201.66666666666666" width="357" height="44"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cew-p4-WND">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IGDC" translatesAutoresizingMaskIntoConstraints="NO" id="cew-p4-WND">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="hD9-WN-wgV"/>
@@ -217,14 +232,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="NsK-0r-6Uy">
                                         <rect key="frame" x="59" y="0.0" width="181" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Organiser Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H14-mw-Fzd">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="GDAI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H14-mw-Fzd">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organiser location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-oN-8b8">
-                                                <rect key="frame" x="0.0" y="22" width="92.666666666666671" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hydrabad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-oN-8b8">
+                                                <rect key="frame" x="0.0" y="22" width="49" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -510,6 +525,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IGDC" width="1200" height="720"/>
         <image name="NIRVANA" width="2322" height="1522"/>
         <image name="envelope.circle.fill" catalog="system" width="128" height="123"/>
         <image name="figure.walk.departure" catalog="system" width="124" height="128"/>
@@ -520,9 +536,6 @@
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -15,6 +15,7 @@
 		3DC831D22D53FF27003F4EAE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC831D12D53FF27003F4EAE /* SDWebImage */; };
 		3DC831D42D53FF27003F4EAE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC831D32D53FF27003F4EAE /* SDWebImageMapKit */; };
 		3DC831DA2D53FFB5003F4EAE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC831D92D53FFB5003F4EAE /* FirebaseStorage */; };
+		3DFF96222D5A4748001A19E4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFF96212D5A4748001A19E4 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 				3DC831D42D53FF27003F4EAE /* SDWebImageMapKit in Frameworks */,
 				173EE9812CEBD2530087678B /* MessageKit in Frameworks */,
 				3D7080E02D58E2DD008B676F /* GoogleSignInSwift in Frameworks */,
+				3DFF96222D5A4748001A19E4 /* FirebaseAuth in Frameworks */,
 				3DC831D22D53FF27003F4EAE /* SDWebImage in Frameworks */,
 				3D43E4202D0EB90A00E7D74F /* FirebaseFirestore in Frameworks */,
 				3DC831DA2D53FFB5003F4EAE /* FirebaseStorage in Frameworks */,
@@ -117,6 +119,7 @@
 				3DC831D92D53FFB5003F4EAE /* FirebaseStorage */,
 				3D7080DD2D58E2DD008B676F /* GoogleSignIn */,
 				3D7080DF2D58E2DD008B676F /* GoogleSignInSwift */,
+				3DFF96212D5A4748001A19E4 /* FirebaseAuth */,
 			);
 			productName = Eventa;
 			productReference = 3DBED9642CB7A3A800778850 /* Eventa.app */;
@@ -456,6 +459,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3D3435352D0E00350006E0C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		3DFF96212D5A4748001A19E4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D3435352D0E00350006E0C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

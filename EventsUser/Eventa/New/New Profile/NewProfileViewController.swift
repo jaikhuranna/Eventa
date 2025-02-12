@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
 
+    @IBOutlet var UserName: UILabel!
     @IBOutlet var imageViewRight: UIImageView!
     @IBOutlet var imageViewLeft: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
@@ -17,7 +20,18 @@ class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let db = Firestore.firestore()
+        
+        if let user = Auth.auth().currentUser{
+            
+            let docRef = db.collection("users").document(user.uid)
+            docRef.getDocument { (document, error) in
+                if let data = document?.data() {
+                    self.UserName.text = data["name"] as? String
+                }
+            }
+        }
+        
         collectionView.layer.cornerRadius = 8
         collectionView.delegate = self
         collectionView.dataSource = self

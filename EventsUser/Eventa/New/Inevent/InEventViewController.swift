@@ -23,7 +23,7 @@ class InEventViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.setCollectionViewLayout(generateLoyout(), animated: true)
+        collectionView.setCollectionViewLayout(generateLayout(), animated: true)
         
         imageVIEW.image = UIImage(named: InEventViewController.eventToShow!
             .imageURL)
@@ -40,22 +40,38 @@ class InEventViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        2
+        users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let photo = users[indexPath.row].profilePhoto
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleWithIntrestsCell", for: indexPath) as? PeopleWithIntrestsCollectionViewCell {
+            cell.imageView.image = photo
             return cell
         }
         return UICollectionViewCell()
     }
     
-    func generateLoyout() -> UICollectionViewFlowLayout {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        layout.itemSize = CGSize(width: 200, height: 150)
-        layout.minimumInteritemSpacing = 20
-        return layout
+    
+    func generateLayout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { (sectionIndex, env) -> NSCollectionLayoutSection? in
+            
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0/2.0),
+                                                  heightDimension: .fractionalWidth(1.0/2.0)) // Square items
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                   heightDimension: .fractionalWidth(1.0/2.0)) // Match item height
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                           repeatingSubitem: item, count: 2)
+            group.interItemSpacing = .fixed(2) // Spacing between items
+
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = 2 // Spacing between rows
+            section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 2, bottom: 10, trailing: 2)
+
+            return section
+        }
     }
     
 }

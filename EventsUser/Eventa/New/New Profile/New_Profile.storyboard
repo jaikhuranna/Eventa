@@ -217,6 +217,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="Xe0-xE-geO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="UserName" destination="2pK-rv-8eh" id="H86-BI-Aev"/>
                         <outlet property="collectionView" destination="AXz-kV-sJK" id="SON-0w-wu9"/>
                         <outlet property="eventsAttended" destination="AKO-f3-gbk" id="r0E-II-FYY"/>
                         <outlet property="imageViewLeft" destination="Ucp-mU-bKu" id="H3k-eB-GjD"/>
@@ -257,7 +258,7 @@
         <image name="hobbyPhoto2.png" width="150" height="149"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

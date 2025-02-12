@@ -473,14 +473,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-SA-HCj">
                                         <rect key="frame" x="59" y="0.0" width="157" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Organiser Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-xT-cf6">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="GDAI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-xT-cf6">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organiser location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9t-U8-oyW">
-                                                <rect key="frame" x="0.0" y="22" width="92.666666666666671" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hydrabad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9t-U8-oyW">
+                                                <rect key="frame" x="0.0" y="22" width="49" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -555,16 +555,8 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mr-LS-sPL">
                                 <rect key="frame" x="30" y="570.33333333333337" width="333" height="57.333333333333371"/>
-                                <string key="text">Tame Impala is the psychedelic music project of Australian
-multi-instrumentalist Kevin Parker. In the recording studio,
-Parker writes, records, performs, and produces all of the 
-project's music.Tame Impala is the psychedelic music project of Australian
-multi-instrumentalist Kevin Parker. In the recording studio,
-Parker writes, records, performs, and produces all of the 
-project's music.Tame Impala is the psychedelic music project of Australian
-multi-instrumentalist Kevin Parker. In the recording studio,
-Parker writes, records, performs, and produces all of the 
-project's music.</string>
+                                <string key="text">IGDC (short for India Game Developer Conference) is an annual expo of upcoming video games in India.
+The event is mainly participated by Indian game developers and publishers but foreign video game companies like Rockstar Games also engaged.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

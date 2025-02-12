@@ -11,16 +11,27 @@ class getToKnowYouViewController: UIViewController {
     
     @IBOutlet var NameFeild: UITextField!
     
+    @IBOutlet var getShortTagLine: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func editedFeild(_ sender: Any) {
-        getTaglineViewController.NameforLabel = NameFeild.text ?? "fd";
-    }
+    @IBAction func toIntrestViewController(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let On4 = storyboard.instantiateViewController(withIdentifier: "On4")
 
+        if let pageController = self.parent as? OnboardingPageViewController
+        {
+            pageController.pageControl.removeFromSuperview()
+            pageController.setViewControllers( [On4], direction: .forward, animated: true)
+        }
+        OnboardIntrestsViewController.name = NameFeild.text!
+        OnboardIntrestsViewController.tagline = getShortTagLine.text!
+        
+    }
+    
         /*
          // MARK: - Navigation
          

@@ -20,17 +20,17 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         dataSource = self;
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let On1 = storyboard.instantiateViewController(withIdentifier: "On1")
-        let On2 = storyboard.instantiateViewController(withIdentifier: "On2")
-        let On3 = storyboard.instantiateViewController(withIdentifier: "On3")
-        let On4 = storyboard.instantiateViewController(withIdentifier: "On4")
-        let On5 = storyboard.instantiateViewController(withIdentifier: "On5")
+//        let On2 = storyboard.instantiateViewController(withIdentifier: "On2")
+//        let On3 = storyboard.instantiateViewController(withIdentifier: "On3")
+//        let On4 = storyboard.instantiateViewController(withIdentifier: "On4")
+//        let On5 = storyboard.instantiateViewController(withIdentifier: "On5")
 
-        pages = [On1, On2, On3, On4, On5]
+        pages = [On1]
         if let firstPage = pages.first {
             setViewControllers([firstPage], direction: .forward, animated: true)
         }
         
-        setupPageControl()
+//        setupPageControl()
         pageControl.isUserInteractionEnabled = false;
         pageControl.currentPageIndicatorTintColor = .purple
     }
