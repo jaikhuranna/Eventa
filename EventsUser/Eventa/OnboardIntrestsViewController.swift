@@ -43,8 +43,8 @@ class OnboardIntrestsViewController: UIViewController, UICollectionViewDataSourc
         let db = Firestore.firestore()
         
         let userData: [String: Any] = [
-            "name": OnboardIntrestsViewController.name ?? "Default", // Collect from user input
-            "tagline": OnboardIntrestsViewController.tagline ?? "WOW", // Collect from user input
+            "name": OnboardIntrestsViewController.name ?? "Default",
+            "tagline": OnboardIntrestsViewController.tagline ?? "WOW",
         ]
 
         db.collection("users").document(userID).setData(userData) { error in

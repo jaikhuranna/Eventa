@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
-
+    
     @IBOutlet var UserName: UILabel!
     @IBOutlet var imageViewRight: UIImageView!
     @IBOutlet var imageViewLeft: UIImageView!
@@ -71,6 +71,6 @@ class NewProfileViewController: UIViewController, UICollectionViewDelegate, UICo
             return section
         }
         return layout }
-
+    
     
 }

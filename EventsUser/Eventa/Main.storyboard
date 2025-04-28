@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Land" translatesAutoresizingMaskIntoConstraints="NO" id="741-i8-62B">
-                                <rect key="frame" x="0.0" y="2" width="402" height="555"/>
+                                <rect key="frame" x="0.0" y="-4" width="402" height="555"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="555" id="LRc-lC-dP2"/>
                                 </constraints>
@@ -195,7 +195,7 @@
                             <constraint firstItem="W5U-XE-aby" firstAttribute="bottom" secondItem="4Da-rT-GGb" secondAttribute="bottom" constant="30" id="J6Z-Xd-BQN"/>
                             <constraint firstItem="741-i8-62B" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" id="Suf-vS-rHt"/>
                             <constraint firstItem="4Da-rT-GGb" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" constant="40" id="UpE-bk-AWs"/>
-                            <constraint firstItem="741-i8-62B" firstAttribute="top" secondItem="W5U-XE-aby" secondAttribute="top" constant="-60" id="YUV-4n-FQZ"/>
+                            <constraint firstItem="741-i8-62B" firstAttribute="top" secondItem="W5U-XE-aby" secondAttribute="top" constant="-66" id="YUV-4n-FQZ"/>
                             <constraint firstItem="W5U-XE-aby" firstAttribute="trailing" secondItem="4Da-rT-GGb" secondAttribute="trailing" constant="40" id="aYX-6q-8Ms"/>
                             <constraint firstItem="yYR-L9-bnO" firstAttribute="centerX" secondItem="4Om-Rg-zRk" secondAttribute="centerX" id="hte-Vy-3Re"/>
                             <constraint firstItem="yYR-L9-bnO" firstAttribute="leading" secondItem="W5U-XE-aby" secondAttribute="leading" constant="31" id="hy7-gd-kDo"/>

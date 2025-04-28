@@ -96,9 +96,6 @@ class letsGetYourEmailAndPasswordViewController: UIViewController {
 //                let signupVC = SignupViewController()
 //                signupVC.modalPresentationStyle = .fullScreen
 //                viewController.present(signupVC, animated: true)
-                if let user = Auth.auth().currentUser {
-                    print(user.phoneNumber!)
-                }
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let On2 = storyboard.instantiateViewController(withIdentifier: "On2")
